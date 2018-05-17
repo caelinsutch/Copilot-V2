@@ -4,12 +4,15 @@ const sass = require('gulp-sass');
 
 gulp.task('default', ['browserSync', 'sass', 'bootstrap', 'js']);
 //compile SASS files into CSS files
-gulp.task('sass', function(){
-  return gulp.src('src/scss/style.scss')
-  .pipe(sass())
-  .pipe(gulp.dest('src/css'))
-  .pipe(browserSync.stream());
-})
+gulp.task('sass', function () {
+  return gulp.src('./sass/**/*.scss')
+    .pipe(sass.sync().on('error', sass.logError))
+    .pipe(gulp.dest('./css'));
+});
+
+gulp.task('sass:watch', function () {
+  gulp.watch('./sass/**/*.scss', ['sass']);
+});
 
 gulp.task('bootstrap', function(){
   return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss'])
@@ -31,6 +34,6 @@ gulp.task('browserSync', function() {
     }
   })
 })
-gulp.task('watch', ['browserSync', 'sass', 'bootstrap', 'js'], function (){
+gulp.task('watch', ['browserSync', 'sass:watch', 'bootstrap', 'js'], function (){
   gulp.watch('src/scss/**/*.scss', ['sass']);
 })

@@ -3,3 +3,11 @@
 
 .card-subtitle {
   color: grey; }
+
+.text-large {
+  font-size: 40px; }
+
+.button-container {
+  width: 100%;
+  height: 100%;
+  position: relative; }
