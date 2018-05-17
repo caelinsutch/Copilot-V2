@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 
-gulp.task('default', ['sass', 'bootstrap', 'js']);
+gulp.task('default', ['browserSync', 'sass', 'bootstrap', 'js']);
 //compile SASS files into CSS files
 gulp.task('sass', function(){
   return gulp.src('src/scss/style.scss')
@@ -31,6 +31,6 @@ gulp.task('browserSync', function() {
     }
   })
 })
-gulp.task('watch', ['browserSync', 'sass'], function (){
+gulp.task('watch', ['browserSync', 'sass', 'bootstrap', 'js'], function (){
   gulp.watch('src/scss/**/*.scss', ['sass']);
 })
