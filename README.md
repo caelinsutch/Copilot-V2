@@ -28,7 +28,7 @@ npm install
 Install Gulp Globally
 
 ```
-npm install gulp -g
+sudo npm install gulp -g
 ```
 
 Your Done!
