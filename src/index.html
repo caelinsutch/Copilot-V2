@@ -96,26 +96,23 @@
               <div class="col-4">
                 <h6 class="font-weight-normal text-muted">Humid.</h6>
                 <h6 class="font-weight-bold">.12</h6>
-
               </div>
             </div>
           </div>
         </div>
-
-        <div class="col-lg-3">
-          <div class="row mt-1">
-            <div class="card ml-3 mt-4 shadow mr-3">
-              <div class="card-body">
-                <h5 class="card-title text-uppercase text-center">Mission Timer</h5>
-                  <div class="row">
-                    <div class="col mx-2">
-                      <h5 class="text-center text-primary">00.00.00</h5>
-                      <h5 class="text-center text-muted">Start Stop</h5>
-                    </div>
+        <div class="col">
+            <div class="card my-4 shadow container">
+              <h5 class="card-title text-uppercase text-center mt-4">Mission Timer</h5>
+              <h1 id="stopwatch"></h1>
+                <div class="row text-center">
+                  <div class="col mb-3">
+                    <h1 class="mb-3" id="disp">0:0:0</h1>
+                    <button class="btn btn-success" onclick="start();">START</button>
+                    <button class="btn btn-danger"  onclick = "stop();" id="stop-btn">CLEAR</button>
                   </div>
                 </div>
             </div>
-            <div class="card ml-2 mt-4 shadow">
+            <div class="card my-4 shadow">
               <div class="card-body">
                 <h5 class="card-title text-uppercase text-center">Depth Indicator</h5>
                   <div class="row">
@@ -125,18 +122,19 @@
                   </div>
                 </div>
               </div>
-          </div>
-          <div class="row-lg-2 mt-0">
-            <div class="card my-4 shadow">
-              <div class="card-body">
-                <h5 class="card-title text-uppercase text-center">Liftbag</h5>
-                  <div class="row">
-                    <div class="col mx-2 text-center">
-                      <button type="button" class="btn btn-primary">Liftbag Locked</button>
+          <div>
+            <div class="row-lg-2 my-4">
+              <div class="card my-4 shadow">
+                <div class="card-body">
+                  <h5 class="card-title text-uppercase text-center">Liftbag</h5>
+                    <div class="row">
+                      <div class="col mx-2 text-center">
+                        <button type="button" class="btn btn-primary">Liftbag Locked</button>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+            </div>
           </div>
           <div class="row-lg-2 mt-0">
             <div class="card my-4 shadow">
