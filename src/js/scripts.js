@@ -208,9 +208,146 @@ function toggleCamera1(e){
         camera1.value = "ON";
         console.log("Camera 1 ON");
 				$('#camera1').addClass('btn-info')
-        $('#camera').removeClass('btn-danger')
+        $('#camera1').removeClass('btn-danger')
         }
     else {
-      highPowerOff();
+      camera1Off();
          }
    }
+
+
+function toggleCamera2(e){
+   if (camera2.value=="OFF"){
+			 camera1Off();
+       camera3Off();
+       camera4Off();
+       camera5Off();
+       camera6Off();
+       camera7Off();
+       camera8Off();
+       camera2.value = "ON";
+       console.log("Camera 2 ON");
+			 $('#camera2').addClass('btn-info')
+       $('#camera2').removeClass('btn-danger')
+       }
+   else {
+     camera2Off();
+        }
+  }
+
+function toggleCamera3(e){
+    if (camera3.value=="OFF"){
+				camera2Off();
+        camera1Off();
+        camera4Off();
+        camera5Off();
+        camera6Off();
+        camera7Off();
+        camera8Off();
+        camera3.value = "ON";
+        console.log("Camera 3 ON");
+				$('#camera3').addClass('btn-info')
+        $('#camera3').removeClass('btn-danger')
+        }
+    else {
+      camera3Off();
+         }
+   }
+
+
+function toggleCamera4(e){
+   if (camera4.value=="OFF"){
+			 camera2Off();
+       camera3Off();
+       camera1Off();
+       camera5Off();
+       camera6Off();
+       camera7Off();
+       camera8Off();
+       camera4.value = "ON";
+       console.log("Camera 4 ON");
+				$('#camera4').addClass('btn-info')
+       $('#camera4').removeClass('btn-danger')
+       }
+   else {
+     camera4Off();
+        }
+  }
+
+function toggleCamera5(e){
+    if (camera5.value=="OFF"){
+				camera2Off();
+        camera3Off();
+        camera4Off();
+        camera1Off();
+        camera6Off();
+        camera7Off();
+        camera8Off();
+        camera5.value = "ON";
+        console.log("Camera 5 ON");
+				$('#camera5').addClass('btn-info')
+        $('#camera5').removeClass('btn-danger')
+        }
+    else {
+      camera5Off();
+         }
+   }
+
+
+function toggleCamera6(e){
+   if (camera6.value=="OFF"){
+				camera2Off();
+       camera3Off();
+       camera4Off();
+       camera5Off();
+       camera1Off();
+       camera7Off();
+       camera8Off();
+       camera6.value = "ON";
+       console.log("Camera 6 ON");
+				$('#camera6').addClass('btn-info')
+       $('#camera6').removeClass('btn-danger')
+       }
+   else {
+     camera6Off();
+        }
+  }
+
+function toggleCamera7(e){
+    if (camera7.value=="OFF"){
+				camera2Off();
+        camera3Off();
+        camera4Off();
+        camera5Off();
+        camera6Off();
+        camera1Off();
+        camera8Off();
+        camera7.value = "ON";
+        console.log("Camera 7 ON");
+				$('#camera7').addClass('btn-info')
+        $('#camera7').removeClass('btn-danger')
+        }
+    else {
+      camera7Off();
+         }
+   }
+
+
+function toggleCamera8(e){
+   if (camera8.value=="OFF"){
+				camera2Off();
+       camera3Off();
+       camera4Off();
+       camera5Off();
+       camera6Off();
+       camera7Off();
+       camera1Off();
+       camera8.value = "ON";
+       console.log("Camera 8 ON");
+				$('#camera8').addClass('btn-info')
+       $('#camera8').removeClass('btn-danger')
+       }
+   else {
+     camera8Off();
+        }
+  }
