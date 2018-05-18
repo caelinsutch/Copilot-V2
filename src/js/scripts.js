@@ -109,3 +109,41 @@ function toggleLowPower(e){
         lowPowerOff();
          }
    };
+
+function toggleLeftTurn(e) {
+  if (righthandleturn.value == enabled) {
+
+  }
+}
+
+function leftHandleTurnOff() {
+  $('#lefthandleturn').val('disabled');
+  $('#lefthandleturn').removeClass('shadow-lg');
+  $('#lefthandleturn').addClass('shadow-sm');
+  $('#lefthandleturn').removeClass('btn-info');
+  $('#lefthandleturn').addClass('btn-light');
+}
+
+function leftHandleTurnOn() {
+  $('#lefthandleturn').val('enabled');
+  $('#lefthandleturn').addClass('shadow-lg');
+  $('#lefthandleturn').removeClass('shadow-sm');
+  $('#lefthandleturn').addClass('btn-info');
+  $('#lefthandleturn').removeClass('btn-light');
+}
+
+function rightHandleTurnOff() {
+  $('#righthandleturn').val('disabled');
+  $('#righthandleturn').removeClass('shadow-lg');
+  $('#righthandleturn').addClass('shadow-sm');
+  $('#righthandleturn').removeClass('btn-info');
+  $('#righthandleturn').addClass('btn-light');
+}
+
+function rightHandleTurnOn() {
+  $('#righthandleturn').val('enabled');
+  $('#righthandleturn').addClass('shadow-lg');
+  $('#righthandleturn').removeClass('shadow-sm');
+  $('#righthandleturn').addClass('btn-info');
+  $('#righthandleturn').removeClass('btn-light');
+}
