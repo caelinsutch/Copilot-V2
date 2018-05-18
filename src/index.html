@@ -27,7 +27,7 @@
   <title>CoPilot Page V2</title>
 </head>
 
-<body>
+<body onload="toggleHighPower()">
   <nav class="navbar navbar-dark bg-info">
     <a class="navbar-brand" href="#">Jesuit Robotics</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -149,7 +149,7 @@
             </div>
           </div>
         </div>
-        <div class="card my-4 shadow">
+        <div class="card my-4 shadow pb-2 pt-2">
           <div class="card-body p-3">
             <h5 class="card-title text-uppercase text-center">Handle Turner</h5>
             <div class="container">
@@ -181,87 +181,6 @@
           </div>
         </div>
       </div>
-        <div class="col pr-5">
-          <div class="row">
-            <div class="card ml-2 mt-4 shadow">
-              <div class="card-body">
-                <!--<IMG SRC="http://192.168.1.201/axis-cgi/mjpg/video.cgi?resolution=704x480&dummy=1524884087878" HEIGHT="480" WIDTH="704" ALT="Camera Image">-->
-                <IMG SRC="/images/yeet.jpg" HEIGHT="480" WIDTH="704" ALT="Camera Image">
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="card ml-2 mt-3 shadow">
-              <h5 class="card-title text-uppercase text-center mt-2 mb-0">Task One: Aircraft</h5>
-              <div class="card-body mt-0">
-                <div class="form-check abc-checkbox abc-checkbox-primary">
-                  <input class="form-check-input" id="checkbox1" type="checkbox">
-                  <label class="form-check-label" for="checkbox1">Use Flight Data to Determine Search Zone</label>
-                </div>
-                <div class="form-check abc-checkbox abc-checkbox-primary">
-                  <input class="form-check-input" id="checkbox2" type="checkbox">
-                  <label class="form-check-label" for="checkbox2">Identify Aircraft Using Tail</label>
-                </div>
-                <div class="form-check abc-checkbox abc-checkbox-primary">
-                  <input class="form-check-input" id="checkbox3" type="checkbox">
-                  <label class="form-check-label" for="checkbox3">Remove Debris From Engine Using Lift Bag</label>
-                </div>
-                <div class="form-check abc-checkbox abc-checkbox-primary">
-                  <input class="form-check-input" id="checkbox4" type="checkbox">
-                  <label class="form-check-label" for="checkbox4">Return Engine to Surface Side of Pool Using Lift Bag</label>
-                </div>
-                <div class="form-check abc-checkbox abc-checkbox-primary">
-                  <input class="form-check-input" id="checkbox5" type="checkbox">
-                  <label class="form-check-label" for="checkbox5">Return All Lift Bags To Surface</label>
-                </div>
-              </div>
-            </div>
-            <div class="card ml-2 mt-3 pr-3 pl-3 shadow">
-              <h5 class="card-title text-uppercase text-center mt-2 mb-0">Task Two: Earthquakes</h5>
-              <div class="card-body mt-0">
-                <div class="form-check abc-checkbox abc-checkbox-primary">
-                  <input class="form-check-input" id="checkbox6" type="checkbox">
-                  <label class="form-check-label" for="checkbox6">Insert Cable and Power OBS</label>
-                </div>
-                <div class="form-check abc-checkbox abc-checkbox-primary">
-                  <input class="form-check-input" id="checkbox7" type="checkbox">
-                  <label class="form-check-label" for="checkbox7">Level OBS using Wifi Data</label>
-                </div>
-                <div class="form-check abc-checkbox abc-checkbox-primary">
-                  <input class="form-check-input" id="checkbox8" type="checkbox">
-                  <label class="form-check-label" for="checkbox8">Graph Seismograph Data</label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="card ml-2 mt-2 pr-8 pl-8 shadow">
-              <h5 class="card-title text-uppercase text-center mt-2 mb-0">Task Three: Energy</h5>
-              <div class="card-body mt-0">
-                <div class="form-check abc-checkbox abc-checkbox-primary">
-                  <input class="form-check-input" id="checkbox9" type="checkbox">
-                  <label class="form-check-label" for="checkbox9">Determine Location for Tidal Turbine</label>
-                </div>
-                <div class="form-check abc-checkbox abc-checkbox-primary">
-                  <input class="form-check-input" id="checkbox10" type="checkbox">
-                  <label class="form-check-label" for="checkbox10">Install Tidal Turbine</label>
-                </div>
-                <div class="form-check abc-checkbox abc-checkbox-primary">
-                  <input class="form-check-input" id="checkbox11" type="checkbox">
-                  <label class="form-check-label" for="checkbox11">Install I-AMP</label>
-                </div>
-                <div class="form-check abc-checkbox abc-checkbox-primary">
-                  <input class="form-check-input" id="checkbox12" type="checkbox">
-                  <label class="form-check-label" for="checkbox12">Place Mooring 10cm Away from Base</label>
-                </div>
-                <div class="form-check abc-checkbox abc-checkbox-primary">
-                  <input class="form-check-input" id="checkbox13" type="checkbox">
-                  <label class="form-check-label" for="checkbox13">Suspend ADV Within 10cm From Bottom of Mooring Line</label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
       <div class="col">
 
@@ -281,3 +200,62 @@
 </body>
 
 </html>
+
+<!-- Saved for later
+
+<div class="form-check abc-checkbox abc-checkbox-primary">
+  <input class="form-check-input" id="checkbox9" type="checkbox">
+  <label class="form-check-label" for="checkbox9">Determine Location for Tidal Turbine</label>
+</div>
+<div class="form-check abc-checkbox abc-checkbox-primary">
+  <input class="form-check-input" id="checkbox10" type="checkbox">
+  <label class="form-check-label" for="checkbox10">Install Tidal Turbine</label>
+</div>
+<div class="form-check abc-checkbox abc-checkbox-primary">
+  <input class="form-check-input" id="checkbox11" type="checkbox">
+  <label class="form-check-label" for="checkbox11">Install I-AMP</label>
+</div>
+<div class="form-check abc-checkbox abc-checkbox-primary">
+  <input class="form-check-input" id="checkbox12" type="checkbox">
+  <label class="form-check-label" for="checkbox12">Place Mooring 10cm Away from Base</label>
+</div>
+<div class="form-check abc-checkbox abc-checkbox-primary">
+  <input class="form-check-input" id="checkbox13" type="checkbox">
+  <label class="form-check-label" for="checkbox13">Suspend ADV Within 10cm From Bottom of Mooring Line</label>
+</div>
+
+<div class="form-check abc-checkbox abc-checkbox-primary">
+  <input class="form-check-input" id="checkbox6" type="checkbox">
+  <label class="form-check-label" for="checkbox6">Insert Cable and Power OBS</label>
+</div>
+<div class="form-check abc-checkbox abc-checkbox-primary">
+  <input class="form-check-input" id="checkbox7" type="checkbox">
+  <label class="form-check-label" for="checkbox7">Level OBS using Wifi Data</label>
+</div>
+<div class="form-check abc-checkbox abc-checkbox-primary">
+  <input class="form-check-input" id="checkbox8" type="checkbox">
+  <label class="form-check-label" for="checkbox8">Graph Seismograph Data</label>
+</div>
+
+<div class="form-check abc-checkbox abc-checkbox-primary">
+  <input class="form-check-input" id="checkbox1" type="checkbox">
+  <label class="form-check-label" for="checkbox1">Use Flight Data to Determine Search Zone</label>
+</div>
+<div class="form-check abc-checkbox abc-checkbox-primary">
+  <input class="form-check-input" id="checkbox2" type="checkbox">
+  <label class="form-check-label" for="checkbox2">Identify Aircraft Using Tail</label>
+</div>
+<div class="form-check abc-checkbox abc-checkbox-primary">
+  <input class="form-check-input" id="checkbox3" type="checkbox">
+  <label class="form-check-label" for="checkbox3">Remove Debris From Engine Using Lift Bag</label>
+</div>
+<div class="form-check abc-checkbox abc-checkbox-primary">
+  <input class="form-check-input" id="checkbox4" type="checkbox">
+  <label class="form-check-label" for="checkbox4">Return Engine to Surface Side of Pool Using Lift Bag</label>
+</div>
+<div class="form-check abc-checkbox abc-checkbox-primary">
+  <input class="form-check-input" id="checkbox5" type="checkbox">
+  <label class="form-check-label" for="checkbox5">Return All Lift Bags To Surface</label>
+</div>
+
+-->
