@@ -147,3 +147,70 @@ function rightHandleTurnOn() {
   $('#righthandleturn').addClass('btn-info');
   $('#righthandleturn').removeClass('btn-light');
 }
+
+function camera1Off() {
+  camera1.value = "OFF";
+  $('#camera1').addClass('btn-danger')
+  $('#camera1').removeClass('btn-info')
+}
+
+function camera2Off() {
+  camera2.value = "OFF";
+  $('#camera2').addClass('btn-danger')
+  $('#camera2').removeClass('btn-info')
+}
+
+function camera3Off() {
+  camera3.value = "OFF";
+  $('#camera3').addClass('btn-danger')
+  $('#camera3').removeClass('btn-info')
+}
+
+function camera4Off() {
+  camera4.value = "OFF";
+  $('#camera4').addClass('btn-danger')
+  $('#camera4').removeClass('btn-info')
+}
+
+function camera5Off() {
+  camera5.value = "OFF";
+  $('#camera5').addClass('btn-danger')
+  $('#camera5').removeClass('btn-info')
+}
+
+function camera6Off() {
+  camera6.value = "OFF";
+  $('#camera6').addClass('btn-danger')
+  $('#camera6').removeClass('btn-info')
+}
+
+function camera7Off() {
+  camera7.value = "OFF";
+  $('#camera7').addClass('btn-danger')
+  $('#camera7').removeClass('btn-info')
+}
+
+function camera8Off() {
+  camera8.value = "OFF";
+  $('#camera8').addClass('btn-danger')
+  $('#camera8').removeClass('btn-info')
+}
+
+function toggleCamera1(e){
+    if (camera1.value=="OFF"){
+				camera2Off();
+        camera3Off();
+        camera4Off();
+        camera5Off();
+        camera6Off();
+        camera7Off();
+        camera8Off();
+        camera1.value = "ON";
+        console.log("Camera 1 ON");
+				$('#camera1').addClass('btn-info')
+        $('#camera').removeClass('btn-danger')
+        }
+    else {
+      highPowerOff();
+         }
+   }
