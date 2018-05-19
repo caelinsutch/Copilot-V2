@@ -97,6 +97,7 @@ function toggleHighPower(e){
         $('#highpower').removeClass('btn-danger')
         $('#highpower').addClass('shadow-lg');
         $('#highpower').removeClass('shadow-sm');
+        overRideSliders();
         }
     else {
       highPowerOff();
@@ -112,11 +113,56 @@ function toggleLowPower(e){
         $('#lowpower').removeClass('btn-danger')
         $('#lowpower').addClass('shadow-lg');
         $('#lowpower').removeClass('shadow-sm');
+        overRideSliders();
         }
     else {
         lowPowerOff();
          }
    };
+
+   function overRideSliders(){
+   	if (highpower.value=="ON"){
+   		horizontal.value = 18;
+   		vertical.value = 12;
+   		rotational.value = 16;
+   		showSlider1Value(horizontal.value);
+   		showSlider2Value(vertical.value);
+   		showSlider3Value(rotational.value);
+   	} else if (lowpower.value=="ON"){
+   		horizontal.value = 6;
+   		vertical.value = 6;
+   		rotational.value = 6;
+   		showSlider1Value(horizontal.value);
+   		showSlider2Value(vertical.value);
+   		showSlider3Value(rotational.value);
+   	}
+   };
+
+   function showSlider1Value(){
+   	document.getElementById("Slider1").innerHTML=horizontal.value;
+    adjustDials();
+   }
+
+   function showSlider2Value(){
+   	document.getElementById("Slider2").innerHTML=vertical.value;
+    adjustDials();
+   }
+
+   function showSlider3Value(){
+   	document.getElementById("Slider3").innerHTML=rotational.value;
+    adjustDials();
+   }
+
+   function adjustDials(){
+     thrust2sens.value = vertical.value;
+     thrust5sens.value = vertical.value;
+     thrust1sens.value = horizontal.value;
+     thrust3sens.value = horizontal.value;
+     thrust4sens.value = horizontal.value;
+     thrust6sens.value = horizontal.value;
+     $('.dial')
+        .trigger('change');
+   }
 
 function leftHandleTurnOff() {
   $('#lefthandleturn').val('disabled');
@@ -345,7 +391,23 @@ function toggleCamera6(e){
 
 function toggleCamera7(e){
     if (camera7.value=="OFF"){
-				camera2Off();
+				camera2Off();function overRideSliders(){
+	if (highpower.value=="ON"){
+		horizontal.value = 8;
+		vertical.value = 6;
+		rotational.value = 8;
+		showSlider1Value(horizontal.value);
+		showSlider2Value(vertical.value);
+		showSlider3Value(rotational.value);
+	} else if (lowpower.value=="ON"){
+		horizontal.value = 3;
+		vertical.value = 3;
+		rotational.value = 3;
+		showSlider1Value(horizontal.value);
+		showSlider2Value(vertical.value);
+		showSlider3Value(rotational.value);
+	}
+};
         camera3Off();
         camera4Off();
         camera5Off();
