@@ -118,6 +118,90 @@ function toggleLowPower(e){
          }
    };
 
+   function overRideSliders(){
+   	if (highpower.value=="ON"){
+   		horizontal.value = 18;
+   		vertical.value = 12;
+   		rotational.value = 16;
+   		showSlider1Value(horizontal.value);
+   		showSlider2Value(vertical.value);
+   		showSlider3Value(rotational.value);
+   	} else if (lowpower.value=="ON"){
+   		horizontal.value = 6;
+   		vertical.value = 6;
+   		rotational.value = 6;
+   		showSlider1Value(horizontal.value);
+   		showSlider2Value(vertical.value);
+   		showSlider3Value(rotational.value);
+   	}
+   };
+
+   function showSlider1Value(horizontalValue){
+   	document.getElementById("Slider1").innerHTML=horizontalValue;
+   	console.log(horizontalValue);
+   	var x = horizontalValue;
+   	$.fn.horizontalThrusters = function( userdefinedoptions ){
+   	    var $this = $(this), opt , count = 0;
+   	    $this.knob({
+   	        'min':1,
+   	        'max': 9,
+   	        'readOnly': true,
+   	        'width': 80,
+   	        'height': 80,
+   	        'fgColor': "#2EA2CB",
+   	        'bgColor': "transparent",
+   	        'displayInput' : true,
+   	        'dynamicDraw': false,
+   	        'ticks': 0,
+   	        'thickness': 0.3,
+   					'angleOffset': -125,
+   					'angleArc': 250
+
+   	    });
+   			$this.val(x).trigger('change');
+   	};
+
+   	$('#HorizontalThrusterPower1').horizontalThrusters();
+   	$('#HorizontalThrusterPower3').horizontalThrusters();
+   	$('#HorizontalThrusterPower4').horizontalThrusters();
+   	$('#HorizontalThrusterPower6').horizontalThrusters();
+   }
+
+   function showSlider2Value(verticalValue)
+   {
+   	document.getElementById("Slider2").innerHTML=verticalValue;
+   	console.log(verticalValue);
+   	var y = verticalValue;
+   	$.fn.verticalThrusters = function( userdefinedoptions ){
+   			var $this = $(this), opt , count = 0;
+   			$this.knob({
+   					'min':1,
+   					'max': 9,
+   					'readOnly': true,
+   					'width': 80,
+   					'height': 80,
+   					'fgColor': "#2EA2CB",
+   					'bgColor': "transparent",
+   					'displayInput' : true,
+   					'dynamicDraw': false,
+   					'ticks': 0,
+   					'thickness': 0.3,
+   					'angleOffset': -125,
+   					'angleArc': 250
+
+   			});
+   			$this.val(y).trigger('change');
+   	};
+
+   	$('#VerticalThrusterPower5').verticalThrusters();
+   	$('#VerticalThrusterPower2').verticalThrusters();
+   }
+
+   function showSlider3Value(rotationalValue){
+   	document.getElementById("Slider3").innerHTML=rotationalValue;
+   	console.log("Test" + rotationalValue)
+   }
+
 function leftHandleTurnOff() {
   $('#lefthandleturn').val('disabled');
   $('#lefthandleturn').removeClass('shadow-lg');
@@ -345,7 +429,23 @@ function toggleCamera6(e){
 
 function toggleCamera7(e){
     if (camera7.value=="OFF"){
-				camera2Off();
+				camera2Off();function overRideSliders(){
+	if (highpower.value=="ON"){
+		horizontal.value = 8;
+		vertical.value = 6;
+		rotational.value = 8;
+		showSlider1Value(horizontal.value);
+		showSlider2Value(vertical.value);
+		showSlider3Value(rotational.value);
+	} else if (lowpower.value=="ON"){
+		horizontal.value = 3;
+		vertical.value = 3;
+		rotational.value = 3;
+		showSlider1Value(horizontal.value);
+		showSlider2Value(vertical.value);
+		showSlider3Value(rotational.value);
+	}
+};
         camera3Off();
         camera4Off();
         camera5Off();
