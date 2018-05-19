@@ -74,7 +74,7 @@ body {
   line-height: 1.5;
   color: #aaa;
   text-align: left;
-  background-color: #272B30;
+  background-color: #393D41;
   overflow:hidden;
 }
 
@@ -4633,7 +4633,7 @@ input[type="button"].btn-block {
           flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #32383e;
+  background-color: #393D41;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.6);
   border-radius: 0.25rem;
@@ -16453,7 +16453,7 @@ input[type=range].slider::-webkit-slider-thumb {
   height: 20px;
   width: 20px;
   border-radius: 50px;
-  background: #669ad8;
+  background: #009FB3;
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -5.1px;
@@ -16476,7 +16476,7 @@ input[type=range].slider::-moz-range-thumb {
   height: 20px;
   width: 20px;
   border-radius: 50px;
-  background: #669ad8;
+  background: #009FB3;
   cursor: pointer;
 }
 input[type=range].slider::-ms-track {
@@ -16505,7 +16505,7 @@ input[type=range].slider::-ms-thumb {
   height: 20px;
   width: 20px;
   border-radius: 50px;
-  background: #669ad8;
+  background: #009FB3;
   cursor: pointer;
   height: 9.8px;
 }

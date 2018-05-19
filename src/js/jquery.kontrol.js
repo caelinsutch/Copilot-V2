@@ -1057,7 +1057,7 @@ $(function() {
     $(".dial")
             .dial({
                 fgColor:"#00A0B5"
-                , bgColor:"#353B40"
+                , bgColor:"#3B3F43"
                 , thickness : .3
                 /*, change : function (value) {
                  console.log("change : ", value);
@@ -1072,7 +1072,7 @@ $(function() {
                 , bgColor:"#353B40"
             }
             , rack : {
-                "background-color":"#FFFFFF"
+                "background-color":"#3B3F43"
                 , "color":"#87CEEB"
             }
         }
@@ -1082,7 +1082,7 @@ $(function() {
                 , bgColor:"#353B40"
             }
             , rack : {
-                "background-color":"#FFFFFF"
+                "background-color":"#3B3F43"
                 , "color":"#00A0B5"
             }
         }
@@ -1092,7 +1092,7 @@ $(function() {
                 , bgColor:"#444444"
             }
             , rack : {
-                "background-color":"#00A0B5"
+                "background-color":"#3B3F43"
                 , "color":"#FFFFFF"
             }
         }
@@ -1102,7 +1102,7 @@ $(function() {
                 , bgColor:"#DDDDDD"
             }
             , rack : {
-                "background-color":"#FFFFFF"
+                "background-color":"#3B3F43"
                 , "color":"#00FF00"
             }
         }
@@ -1112,7 +1112,7 @@ $(function() {
                 , bgColor:"#DDDDDD"
             }
             , rack : {
-                "background-color":"#353B40"
+                "background-color":"#3B3F43"
                 , "color":"#FF0000"
             }
         }
