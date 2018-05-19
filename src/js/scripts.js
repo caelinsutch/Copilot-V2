@@ -61,6 +61,18 @@
     }
   };
 
+  document.addEventListener("keydown", function (e) {
+      if (e.keyCode === 83) {
+         start();
+      }
+  });
+
+  document.addEventListener("keydown", function (e) {
+      if (e.keyCode === 68) {
+         stop();
+      }
+  });
+
 function liftBag() {
   console.log('LiftBag')
   $('#lock').removeClass('fa-lock');
@@ -69,6 +81,12 @@ function liftBag() {
   $('#liftbag').addClass('btn-info');
   $('#liftbag').removeClass('btn-danger');
 };
+
+document.addEventListener("keydown", function (e) {
+    if (e.keyCode === 76) {
+       liftBag();
+    }
+});
 
 function lowPowerOff() {
   lowpower.value = "OFF";
@@ -119,6 +137,20 @@ function toggleLowPower(e){
         lowPowerOff();
          }
    };
+
+   document.addEventListener("keydown", function (e) {
+       if (e.keyCode === 189) {
+          toggleHighPower(e);
+   				overRideSliders(e);
+       }
+   });
+
+   document.addEventListener("keydown", function (e) {
+       if (e.keyCode === 187) {
+          toggleLowPower(e);
+   				overRideSliders(e);
+       }
+   });
 
    function overRideSliders(){
    	if (highpower.value=="ON"){
@@ -195,6 +227,20 @@ function rightHandleTurnOn() {
   $('#righthandleturn').addClass('btn-info');
   $('#righthandleturn').removeClass('btn-light');
 }
+
+document.addEventListener("keydown", function (e) {
+    if (e.keyCode === 48) {
+       rightHandleTurnOn();
+       leftHandleTurnOff();
+    }
+});
+
+document.addEventListener("keydown", function (e) {
+    if (e.keyCode === 57) {
+       rightHandleTurnOff();
+       leftHandleTurnOn();
+    }
+});
 
 function camera1Off() {
   camera1.value = "OFF";
@@ -448,6 +494,54 @@ function toggleCamera8(e){
         }
   }
 
+  document.addEventListener("keydown", function (e) {
+      if (e.keyCode === 49) {
+         toggleCamera1();
+      }
+  });
+
+  document.addEventListener("keydown", function (e) {
+      if (e.keyCode === 50) {
+         toggleCamera2();
+      }
+  });
+
+  document.addEventListener("keydown", function (e) {
+      if (e.keyCode === 51) {
+         toggleCamera3();
+      }
+  });
+
+  document.addEventListener("keydown", function (e) {
+      if (e.keyCode === 52) {
+         toggleCamera4();
+      }
+  });
+
+  document.addEventListener("keydown", function (e) {
+      if (e.keyCode === 53) {
+         toggleCamera5();
+      }
+  });
+
+  document.addEventListener("keydown", function (e) {
+      if (e.keyCode === 54) {
+         toggleCamera6();
+      }
+  });
+
+  document.addEventListener("keydown", function (e) {
+      if (e.keyCode === 55) {
+         toggleCamera7();
+      }
+  });
+
+  document.addEventListener("keydown", function (e) {
+      if (e.keyCode === 56) {
+         toggleCamera8();
+      }
+  });
+
   function thrustersOff() {
     thrusttoggle.value = "OFF";
     $('#thrusttoggle').addClass('btn-danger')
@@ -479,7 +573,7 @@ function toggleCamera8(e){
     document.getElementById('thrustback').innerHTML = "Back Only Disabled";
   }
 
-  function vertOff() {
+  function vertOff() {2
     thrustvert.value = "OFF";
     $('#thrustvert').addClass('btn-dark')
     $('#thrustvert').removeClass('btn-info')
@@ -497,7 +591,7 @@ function toggleCamera8(e){
     document.getElementById('thrustall').innerHTML = "All Mode Disabled";
   }
 
-function toggleThrusters(e){
+function toggleThrusters(){
    if (thrusttoggle.value=="OFF"){
        thrusttoggle.value = "ON";
        console.log("Thrusters ON");
@@ -512,7 +606,13 @@ function toggleThrusters(e){
         }
   }
 
-function toggleFront(e){
+  document.addEventListener("keydown", function (e) {
+      if (e.keyCode === 32) {
+         toggleThrusters();
+      }
+  });
+
+function toggleFront(){
    if (thrustfront.value=="OFF" && thrusttoggle.value=="ON"){
        thrustfront.value = "ON";
        allOff();
@@ -530,7 +630,13 @@ function toggleFront(e){
         }
   }
 
-function toggleBack(e){
+  document.addEventListener("keydown", function (e) {
+      if (e.keyCode === 70) {
+         toggleFront();
+      }
+  });
+
+function toggleBack(){
    if (thrustback.value=="OFF" && thrusttoggle.value=="ON"){
        thrustback.value = "ON";
        allOff();
@@ -548,7 +654,13 @@ function toggleBack(e){
         }
   }
 
-function toggleVert(e){
+  document.addEventListener("keydown", function (e) {
+      if (e.keyCode === 66) {
+         toggleBack();
+      }
+  });
+
+function toggleVert(){
    if (thrustvert.value=="OFF" && thrusttoggle.value=="ON"){
        thrustvert.value = "ON";
        allOff();
@@ -566,7 +678,13 @@ function toggleVert(e){
         }
   }
 
-function toggleAll(e){
+  document.addEventListener("keydown", function (e) {
+      if (e.keyCode === 86) {
+         toggleVert();
+      }
+  });
+
+function toggleAll(){
    if (thrustall.value=="OFF" && thrusttoggle.value=="ON"){
        thrustall.value = "ON";
        frontOff();
@@ -583,3 +701,9 @@ function toggleAll(e){
      allOff();
         }
   }
+
+  document.addEventListener("keydown", function (e) {
+      if (e.keyCode === 65) {
+         toggleAll();
+      }
+  });
