@@ -1073,7 +1073,7 @@ $(function() {
                 , bgColor:"#353B40"
             }
             , rack : {
-                "background-color":"#3B3F43"
+                "background-color":"#353B40"
                 , "color":"#87CEEB"
             }
         }
@@ -1083,7 +1083,7 @@ $(function() {
                 , bgColor:"#353B40"
             }
             , rack : {
-                "background-color":"#3B3F43"
+                "background-color":"#353B40"
                 , "color":"#00A0B5"
             }
         }
@@ -1093,7 +1093,7 @@ $(function() {
                 , bgColor:"#444444"
             }
             , rack : {
-                "background-color":"#3B3F43"
+                "background-color":"#353B40"
                 , "color":"#FFFFFF"
             }
         }
@@ -1103,7 +1103,7 @@ $(function() {
                 , bgColor:"#DDDDDD"
             }
             , rack : {
-                "background-color":"#3B3F43"
+                "background-color":"#353B40"
                 , "color":"#00FF00"
             }
         }
@@ -1113,7 +1113,7 @@ $(function() {
                 , bgColor:"#DDDDDD"
             }
             , rack : {
-                "background-color":"#3B3F43"
+                "background-color":"#353B40"
                 , "color":"#FF0000"
             }
         }

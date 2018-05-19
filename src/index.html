@@ -385,31 +385,123 @@
             <img alt="Camera Image" height="360" src="/images/yeet.jpg" width="100%">
           </div>
         </div>
-        <div class="col-lg-6 pr-0 pl-0">
+        <div class="col pr-0 pl-0">
           <div class="card mt-4 shadow">
             <div class="card-body mr-3 ml-3">
-              <h5 class="card-title text-uppercase text-center">Cameras</h5>
-							<div class="col m-3">
-	              <div class="row mb-3">
-	                <button type="button" id="camera1" class="btn btn-danger mr-3" value="OFF" onclick="toggleCamera1()">Camera 1</button>
-	                <button type="button" id="camera2" class="btn btn-danger" value="OFF" onclick="toggleCamera2()">Camera 2</button>
-	              </div>
-	              <div class="row mb-3">
-	                <button type="button" id="camera3" class="btn btn-danger mr-3" value="OFF" onclick="toggleCamera3()">Camera 3</button>
-	                <button type="button" id="camera4" class="btn btn-danger" value="OFF" onclick="toggleCamera4()">Camera 4</button>
-	              </div>
-	              <div class="row mb-3">
-	                <button type="button" id="camera5" class="btn btn-danger mr-3" value="OFF" onclick="toggleCamera5()">Camera 5</button>
-	                <button type="button" id="camera6" class="btn btn-danger" value="OFF" onclick="toggleCamera6()">Camera 6</button>
-	              </div>
-	              <div class="row">
-	                <button type="button" id="camera7" class="btn btn-danger mr-3" value="OFF" onclick="toggleCamera7()">Camera 7</button>
-	                <button type="button" id="camera8" class="btn btn-danger" value="OFF" onclick="toggleCamera8()">Camera 8</button>
-	              </div>
+							<div class="row">
+							<div class="col-lg-3 mt-1">
+								<h5 class="card-title text-uppercase text-center mt-4 mb-3">Cameras</h5>
+							</div>
+								<div class="col">
+		              <div class="row mb-2">
+		                <button type="button" id="camera1" class="btn btn-danger mr-2" value="OFF" onclick="toggleCamera1()">Camera 1</button>
+		                <button type="button" id="camera2" class="btn btn-danger mr-2" value="OFF" onclick="toggleCamera2()">Camera 2</button>
+										<button type="button" id="camera3" class="btn btn-danger mr-2" value="OFF" onclick="toggleCamera3()">Camera 3</button>
+		                <button type="button" id="camera4" class="btn btn-danger" value="OFF" onclick="toggleCamera4()">Camera 4</button>
+		              </div>
+		              <div class="row">
+		                <button type="button" id="camera5" class="btn btn-danger mr-2" value="OFF" onclick="toggleCamera5()">Camera 5</button>
+										<button type="button" id="camera6" class="btn btn-danger mr-2" value="OFF" onclick="toggleCamera6()">Camera 6</button>
+		                <button type="button" id="camera7" class="btn btn-danger mr-2" value="OFF" onclick="toggleCamera7()">Camera 7</button>
+		                <button type="button" id="camera8" class="btn btn-danger" value="OFF" onclick="toggleCamera8()">Camera 8</button>
+		              </div>
+								</div>
 							</div>
             </div>
           </div>
         </div>
+				<div class="card mt-4 shadow">
+				  <div class="card-body pt-2 pb-2">
+				    <div class="row">
+				      <div class="col-8 p-0 m-0">
+				        <h5 class="card-title text-center">Task 1: Aircraft</h5>
+
+
+				        <div class="checkbox checkbox-primary">
+				          <input id="checkbox1" type="checkbox"> <label style="" for="checkbox1">Use Flight Data to Determine Search Zone</label>
+				        </div>
+
+
+				        <div class="checkbox checkbox-primary">
+				          <input id="checkbox2" type="checkbox"> <label for="checkbox2">Identify Aircraft Using Tail</label>
+				        </div>
+
+
+				        <div class="checkbox checkbox-primary">
+				          <input id="checkbox3" type="checkbox"> <label for="checkbox3">Remove Debris From Engine Using Lift Bag</label>
+				        </div>
+
+
+				        <div class="checkbox checkbox-primary">
+				          <input id="checkbox4" type="checkbox"> <label for="checkbox4">Return Engine to Surface Side of Pool Using Lift Bag</label>
+				        </div>
+
+
+				        <div class="checkbox checkbox-primary">
+				          <input id="checkbox5" type="checkbox"> <label for="checkbox5">Return All Lift Bags To Surface</label>
+				        </div>
+				      </div>
+
+
+				      <div class="col p-0 m-0">
+				        <h5 class="card-title text-center">Task 2: Energy</h5>
+
+
+				        <div class="checkbox checkbox-primary">
+				          <input id="checkbox6" type="checkbox"> <label for="checkbox6">Insert Cable and Power OBS</label>
+				        </div>
+
+
+				        <div class="checkbox checkbox-primary">
+				          <input id="checkbox7" type="checkbox"> <label for="checkbox7">Level OBS using Wifi Data</label>
+				        </div>
+
+
+				        <div class="checkbox checkbox-primary">
+				          <input id="checkbox8" type="checkbox"> <label for="checkbox8">Graph Seismograph Data</label>
+				        </div>
+				      </div>
+				    </div>
+
+
+				    <div class="row">
+				      <div class="col p-0 m-0">
+				        <h5 class="card-title text-center">Task 3: Earthquakes</h5>
+
+
+				        <div class="row pb-0 mb-0">
+				          <div class="col-8">
+				            <div class="checkbox checkbox-primary">
+				              <input id="checkbox9" type="checkbox"> <label for="checkbox9">Determine Location for Tidal Turbine</label>
+				            </div>
+
+
+				            <div class="checkbox checkbox-primary">
+				              <input id="checkbox12" type="checkbox"> <label for="checkbox12">Place Mooring 10cm Away from Base</label>
+				            </div>
+
+
+				            <div class="checkbox checkbox-primary">
+				              <input id="checkbox13" type="checkbox"> <label for="checkbox13">Suspend ADV Within 10cm From Bottom of Mooring Line</label>
+				            </div>
+				          </div>
+
+
+				          <div class="col">
+				            <div class="checkbox checkbox-primary">
+				              <input id="checkbox10" type="checkbox"> <label for="checkbox10">Install Tidal Turbine</label>
+				            </div>
+
+
+				            <div class="checkbox checkbox-primary">
+				              <input id="checkbox11" type="checkbox"> <label for="checkbox11">Install I-AMP</label>
+				            </div>
+				          </div>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				</div>
 			</div>
 
 		</div>
@@ -421,98 +513,7 @@
 
 
 
-<div class="card mt-4 shadow">
-  <div class="card-body pt-2 pb-2">
-    <div class="row">
-      <div class="col-8 p-0 m-0">
-        <h5 class="text-center text-light">Task 1: Aircraft</h5>
 
-
-        <div class="checkbox checkbox-primary">
-          <input id="checkbox1" type="checkbox"> <label for="checkbox1">Use Flight Data to Determine Search Zone</label>
-        </div>
-
-
-        <div class="checkbox checkbox-primary">
-          <input id="checkbox2" type="checkbox"> <label for="checkbox2">Identify Aircraft Using Tail</label>
-        </div>
-
-
-        <div class="checkbox checkbox-primary">
-          <input id="checkbox3" type="checkbox"> <label for="checkbox3">Remove Debris From Engine Using Lift Bag</label>
-        </div>
-
-
-        <div class="checkbox checkbox-primary">
-          <input id="checkbox4" type="checkbox"> <label for="checkbox4">Return Engine to Surface Side of Pool Using Lift Bag</label>
-        </div>
-
-
-        <div class="checkbox checkbox-primary">
-          <input id="checkbox5" type="checkbox"> <label for="checkbox5">Return All Lift Bags To Surface</label>
-        </div>
-      </div>
-
-
-      <div class="col p-0 m-0">
-        <h5 class="text-center text-light">Task 2: Energy</h5>
-
-
-        <div class="checkbox checkbox-primary">
-          <input id="checkbox6" type="checkbox"> <label for="checkbox6">Insert Cable and Power OBS</label>
-        </div>
-
-
-        <div class="checkbox checkbox-primary">
-          <input id="checkbox7" type="checkbox"> <label for="checkbox7">Level OBS using Wifi Data</label>
-        </div>
-
-
-        <div class="checkbox checkbox-primary">
-          <input id="checkbox8" type="checkbox"> <label for="checkbox8">Graph Seismograph Data</label>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="row">
-      <div class="col p-0 m-0">
-        <h5 class="text-center text-light">Task 3: Earthquakes</h5>
-
-
-        <div class="row pb-0 mb-0">
-          <div class="col-8">
-            <div class="checkbox checkbox-primary">
-              <input id="checkbox9" type="checkbox"> <label for="checkbox9">Determine Location for Tidal Turbine</label>
-            </div>
-
-
-            <div class="checkbox checkbox-primary">
-              <input id="checkbox12" type="checkbox"> <label for="checkbox12">Place Mooring 10cm Away from Base</label>
-            </div>
-
-
-            <div class="checkbox checkbox-primary">
-              <input id="checkbox13" type="checkbox"> <label for="checkbox13">Suspend ADV Within 10cm From Bottom of Mooring Line</label>
-            </div>
-          </div>
-
-
-          <div class="col">
-            <div class="checkbox checkbox-primary">
-              <input id="checkbox10" type="checkbox"> <label for="checkbox10">Install Tidal Turbine</label>
-            </div>
-
-
-            <div class="checkbox checkbox-primary">
-              <input id="checkbox11" type="checkbox"> <label for="checkbox11">Install I-AMP</label>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 -->
