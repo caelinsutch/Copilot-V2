@@ -23,9 +23,18 @@
 	<script charset="utf-8" src="/js/scripts.js"></script>
 
 	<title>CoPilot Page V2</title>
+
+	<script type="text/javascript">
+		if (screen.width <= 750) {
+		document.location = "./views/mobile.html";
+		}
+		if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+		   location.replace("./views/mobile.html");
+		}
+	</script>
 </head>
 
-<body onload="toggleHighPower()">
+<body onload="toggleHighPower()" style="overflow:hidden;">
 	<nav class="navbar navbar-dark bg-info">
 		<a class="navbar-brand" href="#">Jesuit Robotics</a>
     <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border-radius: 0px; border-color: rgb(0,0,0,0);" class="navbar-toggler" data-target="#navbarNav" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>

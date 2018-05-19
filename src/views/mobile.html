@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"><!-- jQuery -->
+
+	<!--Jquery-->
+	<script src="../js/jquery.min.js" type="text/javascript"></script>
+	<script src="../js/jquery.kontrol.js" type="text/javascript"></script>
+
+	<!-- Bootstrap -->
+	<link href="../css/bootstrap.css" rel="stylesheet">
+	<script charset="utf-8" src="../js/bootstrap.min.js"></script>
+
+	<!-- FontAwesome-->
+	<link href="../css/fontawesome-all.min.css" rel="stylesheet">
+	<script defer src="../js/fontawesome-all.js"></script>
+
+	<!-- Other CSS and JS -->
+	<link href="../css/style.css" rel="stylesheet">
+	<script charset="utf-8" src="../js/scripts.js"></script>
+
+	<title>CoPilot Page V2 - Mobile</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-dark bg-info">
+		<a class="navbar-brand" href="#">Jesuit Robotics</a>
+    <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border-radius: 0px; border-color: rgb(0,0,0,0);" class="navbar-toggler" data-target="#navbarNav" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link text-light" href="#">Pilot<span class="sr-only">(current)</span></a>
+				</li>
+
+
+				<li class="nav-item active">
+					<a class="nav-link text-light" href="#">Copilot</a>
+				</li>
+
+
+				<li class="nav-item">
+					<a class="nav-link text-light" href="#">Operations</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+
+	<div class="container-fluid">
+			<div class="col">
+				<div class="card my-4 shadow container">
+					<h5 class="card-title text-uppercase text-center mt-4">Mission Timer</h5>
+
+
+					<h1 id="stopwatch">
+					</h1>
+
+
+					<div class="row text-center">
+						<div class="col mb-3">
+							<h1 class="mb-3" id="disp">00:00:00</h1>
+						</div>
+					</div>
+				</div>
+
+        <div class="card mt-4 shadow">
+          <div class="card-body mr-3 ml-3">
+            <!--<img src="http://192.168.1.201/axis-cgi/mjpg/video.cgi?resolution=704x480&amp;dummy=1524884087878" height="160" width="100%" alt="Camera Image">-->
+            <img alt="Camera Image" height="160" src="/images/yeet.jpg" width="100%">
+          </div>
+        </div>
+				<div class="card mt-4 shadow">
+				  <div class="card-body pt-2 pb-2">
+				      <div class="col">
+				        <h5 class="card-title text-center mb-1">Task 1: Aircraft</h5>
+
+
+				        <div class="checkbox checkbox-primary mb-1">
+				          <input id="checkbox1" type="checkbox"> <label style="" for="checkbox1">Determine Search Zone</label>
+				        </div>
+
+
+				        <div class="checkbox checkbox-primary mb-1">
+				          <input id="checkbox2" type="checkbox"> <label for="checkbox2">Identify Aircraft Using Tail</label>
+				        </div>
+
+
+				        <div class="checkbox checkbox-primary mb-1">
+				          <input id="checkbox3" type="checkbox"> <label for="checkbox3">Remove Debris From Engine</label>
+				        </div>
+
+
+				        <div class="checkbox checkbox-primary mb-1">
+				          <input id="checkbox4" type="checkbox"> <label for="checkbox4">Return Engine to Surface</label>
+				        </div>
+
+
+				        <div class="checkbox checkbox-primary mb-1">
+				          <input id="checkbox5" type="checkbox"> <label for="checkbox5">Return All Lift Bags To Surface</label>
+				        </div>
+
+				        <h5 class="card-title text-center mb-1">Task 2: Energy</h5>
+
+
+				        <div class="checkbox checkbox-primary mb-1">
+				          <input id="checkbox6" type="checkbox"> <label for="checkbox6">Insert Cable and Power OBS</label>
+				        </div>
+
+
+				        <div class="checkbox checkbox-primary mb-1">
+				          <input id="checkbox7" type="checkbox"> <label for="checkbox7">Level OBS using Wifi Data</label>
+				        </div>
+
+
+				        <div class="checkbox checkbox-primary mb-1">
+				          <input id="checkbox8" type="checkbox"> <label for="checkbox8">Graph Seismograph Data</label>
+				        </div>
+
+				        <h5 class="card-title text-center mb-1">Task 3: Earthquakes</h5>
+
+		            <div class="checkbox checkbox-primary mb-1">
+		              <input id="checkbox9" type="checkbox"> <label for="checkbox9">Determine Location forTurbine</label>
+		            </div>
+
+
+		            <div class="checkbox checkbox-primary mb-1">
+		              <input id="checkbox12" type="checkbox"> <label for="checkbox12">Place Mooring 10cm from Base</label>
+		            </div>
+
+
+		            <div class="checkbox checkbox-primary mb-1">
+		              <input id="checkbox13" type="checkbox"> <label for="checkbox13">Place ADV 10cm From Mooring Line</label>
+		            </div>
+
+		            <div class="checkbox checkbox-primary mb-1">
+		              <input id="checkbox10" type="checkbox"> <label for="checkbox10">Install Tidal Turbine</label>
+		            </div>
+
+
+		            <div class="checkbox checkbox-primary">
+		              <input id="checkbox11" type="checkbox"> <label for="checkbox11">Install I-AMP</label>
+		            </div>
+
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+
+
+	</div>
+</body>
+</html>

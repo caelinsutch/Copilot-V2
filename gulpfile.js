@@ -15,7 +15,7 @@ gulp.task('sass:watch', function () {
 });
 
 gulp.task('bootstrap', function(){
-  return gulp.src(['node_modules/bootstrap/scss/bootstrap.scss'])
+  return gulp.src(['./bootstrap.scss'])
     .pipe(sass())
     .pipe(gulp.dest("src/css"))
     .pipe(browserSync.stream());

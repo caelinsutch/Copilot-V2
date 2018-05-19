@@ -1,0 +1,41 @@
+.alert {
+
+  .close {
+    color: $close-color;
+    text-decoration: none;
+  }
+}
+
+.alert {
+  border: none;
+  color: $white;
+
+  a,
+  .alert-link {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  @each $color, $value in $theme-colors {
+    &-#{$color} {
+      background-color: $value;
+    }
+  }
+
+  &-light {
+    &,
+    & a:not(.btn),
+    & .alert-link {
+      color: $body-bg;
+    }
+  }
+}
+
+.badge {
+
+  &-success,
+  &-warning,
+  &-info {
+    color: $white;
+  }
+}

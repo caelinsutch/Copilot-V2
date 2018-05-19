@@ -1,0 +1,10 @@
+.jumbotron {
+  border: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.list-group {
+
+  &-item:hover {
+    background-color: darken($gray-900, 5%);
+  }
+}
