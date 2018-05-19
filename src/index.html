@@ -263,6 +263,20 @@
 					</div>
 				</div>
 
+				<div class="card mt-4 shadow">
+					<div class="card-body pb-3 pt-4 p-3">
+						<h5 class="card-title text-uppercase text-center">Thruster 2</h5>
+						<div class="row" >
+							<div class="col" >
+										<input id="thrust2sens" disabled="disabled" class="dial" data-width="85" data-height="85" data-min="0" data-max="20" data-angleoffset="-125" data-anglearc="250" value="0" style="width: 85px; height: 85px; position: absolute; vertical-align: middle; margin-top: 0px; margin-left: 0px; border: 0px; background: none; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; font-size: 25px; line-height: normal; font-family: Arial; text-align: center; color: rgb(255, 255, 255); padding: 0px; -webkit-appearance: none;">
+							</div>
+
+							<div class="col" >
+										<input id="thrust2raw" disabled="disabled" class="dial" data-width="85" data-height="85" data-min="0" data-max="1100" data-angleoffset="-125" data-anglearc="250" value="1100" style="width: 85px; height: 85px; position: absolute; vertical-align: middle; margin-top: 0px; margin-left: 0px; border: 0px; background: none; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; font-size: 25px; line-height: normal; font-family: Arial; text-align: center; color: rgb(255, 255, 255); padding: 0px; -webkit-appearance: none;">
+							</div>
+						</div>
+					</div>
+				</div>
 
 				<div class="card mt-4 shadow">
 					<div class="card-body pb-3 pt-4 p-3">
@@ -280,20 +294,7 @@
 				</div>
 
 
-				<div class="card mt-4 shadow">
-					<div class="card-body pb-3 pt-4 p-3">
-						<h5 class="card-title text-uppercase text-center">Thruster 5</h5>
-						<div class="row" >
-							<div class="col" >
-										<input id="thrust5sens" disabled="disabled" class="dial" data-width="85" data-height="85" data-min="0" data-max="20" data-angleoffset="-125" data-anglearc="250" value="0" style="width: 85px; height: 85px; position: absolute; vertical-align: middle; margin-top: 0px; margin-left: 0px; border: 0px; background: none; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; font-size: 25px; line-height: normal; font-family: Arial; text-align: center; color: rgb(255, 255, 255); padding: 0px; -webkit-appearance: none;">
-							</div>
 
-							<div class="col" >
-										<input id="thrust5raw" disabled="disabled" class="dial" data-width="85" data-height="85" data-min="0" data-max="1100" data-angleoffset="-125" data-anglearc="250" value="1100" style="width: 85px; height: 85px; position: absolute; vertical-align: middle; margin-top: 0px; margin-left: 0px; border: 0px; background: none; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; font-size: 25px; line-height: normal; font-family: Arial; text-align: center; color: rgb(255, 255, 255); padding: 0px; -webkit-appearance: none;">
-							</div>
-						</div>
-					</div>
-				</div>
 
 				<div class="card mt-4 shadow">
 					<div class="card-body text-center">
@@ -301,17 +302,17 @@
               <button class="btn btn-danger pb-2 pt-2 mb-1" id="thrusttoggle" onclick="toggleThrusters();" type="button" value="OFF">Thrusters Disabled</button>
 						<h5 class="text-muted text-center">Horizontal</h5>
 						<div class="col">
-							<input type="range" id="horizontal" min="0" max="20" value="0" class="slider mr-1 mb-1" onchange="showSlider1Value(this.value)">
+							<input type="range" id="horizontal" min="0" max="20" value="0" class="slider mr-1 mb-1" onchange="showSlider1Value()">
 							<span id="Slider1" class="text">0</span>
 						</div>
 						<h5 class="text-muted text-center mt-1">Vertical</h5>
 						<div class="col">
-							<input type="range" id="vertical" min="0" max="20" value="0" class="slider mr-1 mb-1" onchange="showSlider2Value(this.value)">
+							<input type="range" id="vertical" min="0" max="20" value="0" class="slider mr-1 mb-1" onchange="showSlider2Value()">
 							<span id="Slider2" class="text">0</span>
 						</div>
 						<h5 class="text-muted text-center mt-1">Rotational</h5>
 						<div class="col">
-							<input type="range" id="rotational" min="0" max="20" value="0" class="slider mr-1 mb-1" onchange="showSlider3Value(this.value)">
+							<input type="range" id="rotational" min="0" max="20" value="0" class="slider mr-1 mb-1" onchange="showSlider3Value()">
 							<span id="Slider3" class="text">0</span>
 						</div>
 					</div>
@@ -320,22 +321,6 @@
 
 
 			<div class="col-lg-2">
-				<div class="card mt-4 shadow">
-					<div class="card-body pb-3 pt-4 p-3">
-						<h5 class="card-title text-uppercase text-center">Thruster 2</h5>
-						<div class="row" >
-							<div class="col" >
-										<input id="thrust2sens" disabled="disabled" class="dial" data-width="85" data-height="85" data-min="0" data-max="20" data-angleoffset="-125" data-anglearc="250" value="0" style="width: 85px; height: 85px; position: absolute; vertical-align: middle; margin-top: 0px; margin-left: 0px; border: 0px; background: none; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; font-size: 25px; line-height: normal; font-family: Arial; text-align: center; color: rgb(255, 255, 255); padding: 0px; -webkit-appearance: none;">
-							</div>
-
-							<div class="col" >
-										<input id="thrust2raw" disabled="disabled" class="dial" data-width="85" data-height="85" data-min="0" data-max="1100" data-angleoffset="-125" data-anglearc="250" value="1100" style="width: 85px; height: 85px; position: absolute; vertical-align: middle; margin-top: 0px; margin-left: 0px; border: 0px; background: none; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; font-size: 25px; line-height: normal; font-family: Arial; text-align: center; color: rgb(255, 255, 255); padding: 0px; -webkit-appearance: none;">
-							</div>
-						</div>
-					</div>
-				</div>
-
-
 				<div class="card mt-4 shadow">
 					<div class="card-body pb-3 pt-4 p-3">
 						<h5 class="card-title text-uppercase text-center">Thruster 4</h5>
@@ -351,6 +336,20 @@
 					</div>
 				</div>
 
+				<div class="card mt-4 shadow">
+					<div class="card-body pb-3 pt-4 p-3">
+						<h5 class="card-title text-uppercase text-center">Thruster 5</h5>
+						<div class="row" >
+							<div class="col" >
+										<input id="thrust5sens" disabled="disabled" class="dial" data-width="85" data-height="85" data-min="0" data-max="20" data-angleoffset="-125" data-anglearc="250" value="0" style="width: 85px; height: 85px; position: absolute; vertical-align: middle; margin-top: 0px; margin-left: 0px; border: 0px; background: none; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; font-size: 25px; line-height: normal; font-family: Arial; text-align: center; color: rgb(255, 255, 255); padding: 0px; -webkit-appearance: none;">
+							</div>
+
+							<div class="col" >
+										<input id="thrust5raw" disabled="disabled" class="dial" data-width="85" data-height="85" data-min="0" data-max="1100" data-angleoffset="-125" data-anglearc="250" value="1100" style="width: 85px; height: 85px; position: absolute; vertical-align: middle; margin-top: 0px; margin-left: 0px; border: 0px; background: none; font-style: normal; font-variant: normal; font-weight: bold; font-stretch: normal; font-size: 25px; line-height: normal; font-family: Arial; text-align: center; color: rgb(255, 255, 255); padding: 0px; -webkit-appearance: none;">
+							</div>
+						</div>
+					</div>
+				</div>
 
 				<div class="card mt-4 shadow">
 					<div class="card-body pb-3 pt-4 p-3">

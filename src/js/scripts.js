@@ -97,6 +97,7 @@ function toggleHighPower(e){
         $('#highpower').removeClass('btn-danger')
         $('#highpower').addClass('shadow-lg');
         $('#highpower').removeClass('shadow-sm');
+        overRideSliders();
         }
     else {
       highPowerOff();
@@ -112,6 +113,7 @@ function toggleLowPower(e){
         $('#lowpower').removeClass('btn-danger')
         $('#lowpower').addClass('shadow-lg');
         $('#lowpower').removeClass('shadow-sm');
+        overRideSliders();
         }
     else {
         lowPowerOff();
@@ -136,70 +138,30 @@ function toggleLowPower(e){
    	}
    };
 
-   function showSlider1Value(horizontalValue){
-   	document.getElementById("Slider1").innerHTML=horizontalValue;
-   	console.log(horizontalValue);
-   	var x = horizontalValue;
-   	$.fn.horizontalThrusters = function( userdefinedoptions ){
-   	    var $this = $(this), opt , count = 0;
-   	    $this.knob({
-   	        'min':1,
-   	        'max': 9,
-   	        'readOnly': true,
-   	        'width': 80,
-   	        'height': 80,
-   	        'fgColor': "#2EA2CB",
-   	        'bgColor': "transparent",
-   	        'displayInput' : true,
-   	        'dynamicDraw': false,
-   	        'ticks': 0,
-   	        'thickness': 0.3,
-   					'angleOffset': -125,
-   					'angleArc': 250
-
-   	    });
-   			$this.val(x).trigger('change');
-   	};
-
-   	$('#HorizontalThrusterPower1').horizontalThrusters();
-   	$('#HorizontalThrusterPower3').horizontalThrusters();
-   	$('#HorizontalThrusterPower4').horizontalThrusters();
-   	$('#HorizontalThrusterPower6').horizontalThrusters();
+   function showSlider1Value(){
+   	document.getElementById("Slider1").innerHTML=horizontal.value;
+    adjustDials();
    }
 
-   function showSlider2Value(verticalValue)
-   {
-   	document.getElementById("Slider2").innerHTML=verticalValue;
-   	console.log(verticalValue);
-   	var y = verticalValue;
-   	$.fn.verticalThrusters = function( userdefinedoptions ){
-   			var $this = $(this), opt , count = 0;
-   			$this.knob({
-   					'min':1,
-   					'max': 9,
-   					'readOnly': true,
-   					'width': 80,
-   					'height': 80,
-   					'fgColor': "#2EA2CB",
-   					'bgColor': "transparent",
-   					'displayInput' : true,
-   					'dynamicDraw': false,
-   					'ticks': 0,
-   					'thickness': 0.3,
-   					'angleOffset': -125,
-   					'angleArc': 250
-
-   			});
-   			$this.val(y).trigger('change');
-   	};
-
-   	$('#VerticalThrusterPower5').verticalThrusters();
-   	$('#VerticalThrusterPower2').verticalThrusters();
+   function showSlider2Value(){
+   	document.getElementById("Slider2").innerHTML=vertical.value;
+    adjustDials();
    }
 
-   function showSlider3Value(rotationalValue){
-   	document.getElementById("Slider3").innerHTML=rotationalValue;
-   	console.log("Test" + rotationalValue)
+   function showSlider3Value(){
+   	document.getElementById("Slider3").innerHTML=rotational.value;
+    adjustDials();
+   }
+
+   function adjustDials(){
+     thrust2sens.value = vertical.value;
+     thrust5sens.value = vertical.value;
+     thrust1sens.value = horizontal.value;
+     thrust3sens.value = horizontal.value;
+     thrust4sens.value = horizontal.value;
+     thrust6sens.value = horizontal.value;
+     $('.dial')
+        .trigger('change');
    }
 
 function leftHandleTurnOff() {
