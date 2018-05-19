@@ -260,7 +260,7 @@
 
             return this;
         };
-
+        /*
         this._mouse = function (e) {
 
             var mouseMove = function (e) {
@@ -321,6 +321,7 @@
 
             return this;
         };
+        */
 
         this._xy = function () {
             var o = this.$c.offset();
