@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 
-gulp.task('default', ['browserSync', 'sass', 'bootstrap', 'js']);
+gulp.task('default', ['browserSync', 'sass', 'bootstrap', 'pretty-checkboxes', 'js']);
 //compile SASS files into CSS files
 gulp.task('sass', function () {
   return gulp.src('./sass/**/*.scss')
@@ -21,6 +21,13 @@ gulp.task('bootstrap', function(){
     .pipe(browserSync.stream());
 })
 
+gulp.task('pretty-checkboxes', function(){
+  return gulp.src(['./prettycheckboxes.scss'])
+    .pipe(sass())
+    .pipe(gulp.dest("src/css"))
+    .pipe(browserSync.stream());
+})
+
 gulp.task('js', function(){
   return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.js', 'node_modules/jquery/dist/jquery.min.js', 'node_modules/popper.js/dist/umd/popper.min.js'])
     .pipe(gulp.dest("src/js"))
@@ -34,6 +41,7 @@ gulp.task('browserSync', function() {
     }
   })
 })
-gulp.task('watch', ['browserSync', 'sass:watch', 'bootstrap', 'js'], function (){
+
+gulp.task('watch', ['browserSync', 'sass:watch', 'bootstrap', 'pretty-checkboxes', 'js'], function (){
   gulp.watch('src/scss/**/*.scss', ['sass']);
 })

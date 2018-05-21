@@ -338,7 +338,7 @@
                         "mousedown"
                         , function (e) {
                             e.preventDefault();
-                            s._xy()._mouse(e);
+                            /*s._xy()._mouse(e);*/
                          }
                     )
                     .bind(
@@ -1058,7 +1058,7 @@ $(function() {
     $(".dial")
             .dial({
                 fgColor:"#00A0B5"
-                , bgColor:"#3B3F43"
+                , bgColor:"#353B40"
                 , thickness : .3
                 /*, change : function (value) {
                  console.log("change : ", value);
@@ -1070,20 +1070,20 @@ $(function() {
         skin0 : {
             kontrol : {
                 fgColor:"#87CEEB"
-                , bgColor:"#353B40"
+                , bgColor:"#32383e"
             }
             , rack : {
-                "background-color":"#353B40"
+                "background-color":"#32383e"
                 , "color":"#87CEEB"
             }
         }
         , skin1 : {
             kontrol : {
                 fgColor:"#00A0B5"
-                , bgColor:"#353B40"
+                , bgColor:"#32383e"
             }
             , rack : {
-                "background-color":"#353B40"
+                "background-color":"#32383e"
                 , "color":"#00A0B5"
             }
         }
@@ -1093,7 +1093,7 @@ $(function() {
                 , bgColor:"#444444"
             }
             , rack : {
-                "background-color":"#353B40"
+                "background-color":"#32383e"
                 , "color":"#FFFFFF"
             }
         }
@@ -1103,7 +1103,7 @@ $(function() {
                 , bgColor:"#DDDDDD"
             }
             , rack : {
-                "background-color":"#353B40"
+                "background-color":"#32383e"
                 , "color":"#00FF00"
             }
         }
@@ -1113,7 +1113,7 @@ $(function() {
                 , bgColor:"#DDDDDD"
             }
             , rack : {
-                "background-color":"#353B40"
+                "background-color":"#32383e"
                 , "color":"#FF0000"
             }
         }
