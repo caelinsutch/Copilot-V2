@@ -21,6 +21,7 @@
 	<!-- Other CSS and JS -->
 	<link href="../css/style.css" rel="stylesheet">
 	<script charset="utf-8" src="../js/scripts.js"></script>
+	<script src="/js/socket.io.js" type="text/javascript"></script>
 
 	<title>CoPilot Page V2 - Mobile</title>
 </head>
@@ -152,5 +153,19 @@
 
 
 	</div>
+	<script>
+		var socket = io();
+		socket.on('timerSync',function(msg){
+			console.log(msg);
+			if (msg = 1) {
+				start();
+			} else if (msg = 2){
+				stop();
+			} else if (msg = 3){
+				stop();
+				stop();
+			}
+		});
+	</script>
 </body>
 </html>

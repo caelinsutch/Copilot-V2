@@ -1,7 +1,7 @@
 {
-  "name": "nodejs-test",
-  "version": "1.0.0",
-  "description": "",
+  "name": "roboControl",
+  "version": "0.4",
+  "description": "Jesuit Robotics Robot Control Server",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/caelinsutch/Nodejs-Test.git"
   },
-  "author": "caelinsutch",
+  "author": "Caelin Sutch and Alden Parker",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/caelinsutch/Nodejs-Test/issues"
@@ -28,8 +28,10 @@
     "gulp-sass": "^4.0.1"
   },
   "dependencies": {
+    "awesome-bootstrap-checkbox": "^1.0.1",
     "bootstrap": "^4.1.1",
     "browser-sync": "^2.24.4",
+    "express": "^4.16.3",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-concat": "^2.6.1",
@@ -40,6 +42,6 @@
     "gulp-sass": "^4.0.1",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.3",
-    "awesome-bootstrap-checkbox": "^1.0.1"
+    "socket.io": "^2.1.1"
   }
 }

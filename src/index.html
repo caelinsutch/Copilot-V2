@@ -21,6 +21,7 @@
 	<!-- Other CSS and JS -->
 	<link href="/css/style.css" rel="stylesheet">
 	<script charset="utf-8" src="/js/scripts.js"></script>
+	<script src="/js/socket.io.js" type="text/javascript"></script>
 
 	<title>CoPilot Page V2</title>
 
@@ -179,7 +180,7 @@
 					<div class="row text-center">
 						<div class="col mb-3">
 							<h1 class="mb-3" id="disp">00:00:00</h1>
-							<button class="btn btn-success shadow-sm" id="start-btn" onclick="start();">START</button> <button class="btn btn-danger shadow-sm" id="stop-btn" onclick="stop();">CLEAR</button>
+							<button class="btn btn-success shadow-sm" id="start-btn" onclick="start(); timerStart();">START</button> <button class="btn btn-danger shadow-sm" id="stop-btn" onclick="stop(); timerStop();">CLEAR</button>
 						</div>
 					</div>
 				</div>
@@ -526,5 +527,17 @@
 
 
 -->
+<script>
+	var data = 0;
+	var socket = io();
+	function timerStart(){
+		data = 1;
+		socket.emit('timerSync', data);
+	}
+	function timerStop(){
+		data = data + 1;
+		socket.emit('timerSync', data);
+	}
+</script>
 </body>
 </html>

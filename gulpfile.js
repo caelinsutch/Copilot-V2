@@ -1,6 +1,22 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
+const express = require('express');
+var app = express();
+var server = app.listen(3000);
+
+app.use(express.static('/'));
+
+var timerSync = "";
+const socket = require('socket.io');
+
+const io = socket(server);
+
+io.sockets.on('connection', newConnection);
+
+function newConnection(socket) {
+  console.log("Connected");
+}
 
 gulp.task('default', ['browserSync', 'sass', 'bootstrap', 'js']);
 //compile SASS files into CSS files
@@ -22,7 +38,7 @@ gulp.task('bootstrap', function(){
 })
 
 gulp.task('js', function(){
-  return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.js', 'node_modules/jquery/dist/jquery.min.js', 'node_modules/popper.js/dist/umd/popper.min.js'])
+  return gulp.src(['node_modules/socket.io-client/dist/socket.io.js', 'node_modules/bootstrap/dist/js/bootstrap.js', 'node_modules/jquery/dist/jquery.min.js', 'node_modules/popper.js/dist/umd/popper.min.js'])
     .pipe(gulp.dest("src/js"))
     .pipe(browserSync.stream());
 })
