@@ -201,7 +201,7 @@ function leftHandleTurnOff() {
   $('#lefthandleturn').removeClass('shadow-lg');
   $('#lefthandleturn').addClass('shadow-sm');
   $('#lefthandleturn').removeClass('btn-info');
-  $('#lefthandleturn').addClass('btn-light');
+  $('#lefthandleturn').addClass('btn-danger');
 }
 
 function leftHandleTurnOn() {
@@ -209,7 +209,7 @@ function leftHandleTurnOn() {
   $('#lefthandleturn').addClass('shadow-lg');
   $('#lefthandleturn').removeClass('shadow-sm');
   $('#lefthandleturn').addClass('btn-info');
-  $('#lefthandleturn').removeClass('btn-light');
+  $('#lefthandleturn').removeClass('btn-danger');
 }
 
 function rightHandleTurnOff() {
@@ -217,7 +217,7 @@ function rightHandleTurnOff() {
   $('#righthandleturn').removeClass('shadow-lg');
   $('#righthandleturn').addClass('shadow-sm');
   $('#righthandleturn').removeClass('btn-info');
-  $('#righthandleturn').addClass('btn-light');
+  $('#righthandleturn').addClass('btn-danger');
 }
 
 function rightHandleTurnOn() {
@@ -225,7 +225,7 @@ function rightHandleTurnOn() {
   $('#righthandleturn').addClass('shadow-lg');
   $('#righthandleturn').removeClass('shadow-sm');
   $('#righthandleturn').addClass('btn-info');
-  $('#righthandleturn').removeClass('btn-light');
+  $('#righthandleturn').removeClass('btn-danger');
 }
 
 document.addEventListener("keydown", function (e) {
@@ -552,12 +552,20 @@ function toggleCamera8(e){
     backOff();
     vertOff();
     frontOff();
+    $('#thrustall').addClass('btn-dark');
+    $('#thrustback').addClass('btn-dark');
+    $('#thrustfront').addClass('btn-dark');
+    $('#thrustvert').addClass('btn-dark');
+    $('#thrustall').removeClass('btn-danger');
+    $('#thrustback').removeClass('btn-danger');
+    $('#thrustfront').removeClass('btn-danger');
+    $('#thrustvert').removeClass('btn-danger');
     document.getElementById('thrusttoggle').innerHTML = "Thrusters Disabled";
   }
 
   function frontOff() {
     thrustfront.value = "OFF";
-    $('#thrustfront').addClass('btn-dark')
+    $('#thrustfront').addClass('btn-danger')
     $('#thrustfront').removeClass('btn-info')
     $('#thrustfront').removeClass('shadow-lg');
     $('#thrustfront').addClass('shadow-sm');
@@ -566,7 +574,7 @@ function toggleCamera8(e){
 
   function backOff() {
     thrustback.value = "OFF";
-    $('#thrustback').addClass('btn-dark')
+    $('#thrustback').addClass('btn-danger')
     $('#thrustback').removeClass('btn-info')
     $('#thrustback').removeClass('shadow-lg');
     $('#thrustback').addClass('shadow-sm');
@@ -575,7 +583,7 @@ function toggleCamera8(e){
 
   function vertOff() {2
     thrustvert.value = "OFF";
-    $('#thrustvert').addClass('btn-dark')
+    $('#thrustvert').addClass('btn-danger')
     $('#thrustvert').removeClass('btn-info')
     $('#thrustvert').removeClass('shadow-lg');
     $('#thrustvert').addClass('shadow-sm');
@@ -584,7 +592,7 @@ function toggleCamera8(e){
 
   function allOff() {
     thrustall.value = "OFF";
-    $('#thrustall').addClass('btn-dark')
+    $('#thrustall').addClass('btn-danger')
     $('#thrustall').removeClass('btn-info')
     $('#thrustall').removeClass('shadow-lg');
     $('#thrustall').addClass('shadow-sm');
@@ -599,6 +607,14 @@ function toggleThrusters(){
        $('#thrusttoggle').removeClass('btn-danger')
        $('#thrusttoggle').addClass('shadow-lg');
        $('#thrusttoggle').removeClass('shadow-sm');
+       $('#thrustall').addClass('btn-danger');
+       $('#thrustback').addClass('btn-danger');
+       $('#thrustfront').addClass('btn-danger');
+       $('#thrustvert').addClass('btn-danger');
+       $('#thrustall').removeClass('btn-dark');
+       $('#thrustback').removeClass('btn-dark');
+       $('#thrustfront').removeClass('btn-dark');
+       $('#thrustvert').removeClass('btn-dark');
        document.getElementById('thrusttoggle').innerHTML = "Thrusters Enabled";
        }
    else {
@@ -620,7 +636,7 @@ function toggleFront(){
        vertOff();
        console.log("Front Only ON");
         $('#thrustfront').addClass('btn-info')
-       $('#thrustfront').removeClass('btn-dark')
+       $('#thrustfront').removeClass('btn-danger')
        $('#thrustfront').addClass('shadow-lg');
        $('#thrustfront').removeClass('shadow-sm');
        document.getElementById('thrustfront').innerHTML = "Front Only Enabled";
@@ -644,7 +660,7 @@ function toggleBack(){
        vertOff();
        console.log("Back Only ON");
         $('#thrustback').addClass('btn-info')
-       $('#thrustback').removeClass('btn-dark')
+       $('#thrustback').removeClass('btn-danger')
        $('#thrustback').addClass('shadow-lg');
        $('#thrustback').removeClass('shadow-sm');
        document.getElementById('thrustback').innerHTML = "Back Only Enabled";
@@ -668,7 +684,7 @@ function toggleVert(){
        frontOff();
        console.log("Vertical Only ON");
         $('#thrustvert').addClass('btn-info')
-       $('#thrustvert').removeClass('btn-dark')
+       $('#thrustvert').removeClass('btn-danger')
        $('#thrustvert').addClass('shadow-lg');
        $('#thrustvert').removeClass('shadow-sm');
        document.getElementById('thrustvert').innerHTML = "Vertical Only Enabled";
@@ -692,7 +708,7 @@ function toggleAll(){
        vertOff();
        console.log("All Mode ON");
         $('#thrustall').addClass('btn-info')
-       $('#thrustall').removeClass('btn-dark')
+       $('#thrustall').removeClass('btn-danger')
        $('#thrustall').addClass('shadow-lg');
        $('#thrustall').removeClass('shadow-sm');
        document.getElementById('thrustall').innerHTML = "All Mode Enabled";

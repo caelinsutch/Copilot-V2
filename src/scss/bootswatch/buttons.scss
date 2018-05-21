@@ -340,12 +340,12 @@ a.btn.disabled, fieldset:disabled a.btn {
 
 .btn-dark {
   color: #fff;
-  background-color: #343a40;
-  border-color: #343a40;
+  background-color: #535b63;
+  border-color: #535b63;
   &:hover {
     color: #fff;
-    background-color: #23272b;
-    border-color: #1d2124;
+    background-color: #606870;
+    border-color: #606870;
   }
   &:focus, &.focus {
     box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5);
