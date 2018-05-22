@@ -552,14 +552,25 @@ function toggleCamera8(e){
     backOff();
     vertOff();
     frontOff();
-    $('#thrustall').addClass('btn-dark');
-    $('#thrustback').addClass('btn-dark');
-    $('#thrustfront').addClass('btn-dark');
-    $('#thrustvert').addClass('btn-dark');
-    $('#thrustall').removeClass('btn-danger');
-    $('#thrustback').removeClass('btn-danger');
-    $('#thrustfront').removeClass('btn-danger');
-    $('#thrustvert').removeClass('btn-danger');
+    if (lightMode.value == "OFF") {
+      $('#thrustall').removeClass('btn-danger');
+      $('#thrustback').removeClass('btn-danger');
+      $('#thrustfront').removeClass('btn-danger');
+      $('#thrustvert').removeClass('btn-danger');
+      $('#thrustall').addClass('btn-dark');
+      $('#thrustback').addClass('btn-dark');
+      $('#thrustfront').addClass('btn-dark');
+      $('#thrustvert').addClass('btn-dark');
+    } else if (lightMode.value == "ON") {
+      $('#thrustall').removeClass('btn-danger');
+      $('#thrustback').removeClass('btn-danger');
+      $('#thrustfront').removeClass('btn-danger');
+      $('#thrustvert').removeClass('btn-danger');
+      $('#thrustall').addClass('btn-light');
+      $('#thrustback').addClass('btn-light');
+      $('#thrustfront').addClass('btn-light');
+      $('#thrustvert').addClass('btn-light');
+    }
     document.getElementById('thrusttoggle').innerHTML = "Thrusters Disabled";
   }
 
@@ -603,18 +614,29 @@ function toggleThrusters(){
    if (thrusttoggle.value=="OFF"){
        thrusttoggle.value = "ON";
        console.log("Thrusters ON");
-				$('#thrusttoggle').addClass('btn-success')
+			 $('#thrusttoggle').addClass('btn-success')
        $('#thrusttoggle').removeClass('btn-danger')
        $('#thrusttoggle').addClass('shadow-lg');
        $('#thrusttoggle').removeClass('shadow-sm');
-       $('#thrustall').addClass('btn-danger');
-       $('#thrustback').addClass('btn-danger');
-       $('#thrustfront').addClass('btn-danger');
-       $('#thrustvert').addClass('btn-danger');
-       $('#thrustall').removeClass('btn-dark');
-       $('#thrustback').removeClass('btn-dark');
-       $('#thrustfront').removeClass('btn-dark');
-       $('#thrustvert').removeClass('btn-dark');
+       if (lightMode.value == "OFF") {
+         $('#thrustall').addClass('btn-danger');
+         $('#thrustback').addClass('btn-danger');
+         $('#thrustfront').addClass('btn-danger');
+         $('#thrustvert').addClass('btn-danger');
+         $('#thrustall').removeClass('btn-dark');
+         $('#thrustback').removeClass('btn-dark');
+         $('#thrustfront').removeClass('btn-dark');
+         $('#thrustvert').removeClass('btn-dark');
+       } else if (lightMode.value == "ON") {
+         $('#thrustall').addClass('btn-danger');
+         $('#thrustback').addClass('btn-danger');
+         $('#thrustfront').addClass('btn-danger');
+         $('#thrustvert').addClass('btn-danger');
+         $('#thrustall').removeClass('btn-light');
+         $('#thrustback').removeClass('btn-light');
+         $('#thrustfront').removeClass('btn-light');
+         $('#thrustvert').removeClass('btn-light');
+       }
        document.getElementById('thrusttoggle').innerHTML = "Thrusters Enabled";
        }
    else {
@@ -723,3 +745,120 @@ function toggleAll(){
          toggleAll();
       }
   });
+
+  function lightModeOff() {
+    lightMode.value = "OFF";
+    $('#lightMode').addClass('btn-info')
+    $('#lightMode').removeClass('btn-dark')
+    document.getElementById('lightMode').innerHTML = "Light Mode";
+    document.body.style.backgroundColor="#272B30";
+    document.body.style.color="#aaa";
+    var targets = document.getElementsByClassName('card');
+    var lightText = document.getElementsByClassName('text-light-simple');
+    var mutedText = document.getElementsByClassName('text-muted-simple');
+    var h1 = document.getElementsByTagName('h1');
+    for( var i = 0; i < h1.length; i++ ) {
+      h1[i].style.textShadow="-1px -1px 0 rgba(0, 0, 0, 0.3)";
+      h1[i].style.color="rgb(170, 170, 170)";
+    };
+    var h2 = document.getElementsByTagName('h2');
+    for( var i = 0; i < h2.length; i++ ) {
+      h2[i].style.textShadow="-1px -1px 0 rgba(0, 0, 0, 0.3)";
+    };
+    var h3 = document.getElementsByTagName('h3');
+    for( var i = 0; i < h3.length; i++ ) {
+      h3[i].style.textShadow="-1px -1px 0 rgba(0, 0, 0, 0.3)";
+    };
+    var h4 = document.getElementsByTagName('h4');
+    for( var i = 0; i < h4.length; i++ ) {
+      h4[i].style.textShadow="-1px -1px 0 rgba(0, 0, 0, 0.3)";
+    };
+    var h5 = document.getElementsByTagName('h5');
+    for( var i = 0; i < h5.length; i++ ) {
+      h5[i].style.textShadow="-1px -1px 0 rgba(0, 0, 0, 0.3)";
+      h5[i].style.color="rgb(170, 170, 170)";
+    };
+    var h6 = document.getElementsByTagName('h6');
+    for( var i = 0; i < h6.length; i++ ) {
+      h6[i].style.textShadow="-1px -1px 0 rgba(0, 0, 0, 0.3)";
+    };
+    for( var i = 0; i < mutedText.length; i++ ) {
+      mutedText[i].style.color="#7A8288", "important";
+    };
+    for( var i = 0; i < lightText.length; i++ ) {
+      lightText[i].style.color="#e9ecef";
+    };
+    for( var i = 0; i < targets.length; i++ ) {
+      targets[i].style.backgroundColor="#32383e";
+      targets[i].style.border="1px solid rgba(0, 0, 0, 0.6)";
+    };
+    $('#thrustall').addClass('btn-dark');
+    $('#thrustback').addClass('btn-dark');
+    $('#thrustfront').addClass('btn-dark');
+    $('#thrustvert').addClass('btn-dark');
+    $('#thrustall').removeClass('btn-light');
+    $('#thrustback').removeClass('btn-light');
+    $('#thrustfront').removeClass('btn-light');
+    $('#thrustvert').removeClass('btn-light');
+  }
+
+  function toggleLightMode(){
+      if (lightMode.value=="OFF"){
+          lightMode.value = "ON";
+          $('#lightMode').addClass('btn-dark')
+          $('#lightMode').removeClass('btn-info')
+          document.getElementById('lightMode').innerHTML = "Dark Mode";
+          document.body.style.backgroundColor="#fff";
+          document.body.style.color="#212529";
+          var targets = document.getElementsByClassName('card');
+          var lightText = document.getElementsByClassName('text-light-simple');
+          var mutedText = document.getElementsByClassName('text-muted-simple');
+          var h1 = document.getElementsByTagName('h1');
+          for( var i = 0; i < h1.length; i++ ) {
+            h1[i].style.textShadow="0px 0px 0 rgba(0, 0, 0, 0)";
+            h1[i].style.color="rgb(39, 43, 48)";
+          };
+          var h2 = document.getElementsByTagName('h2');
+          for( var i = 0; i < h2.length; i++ ) {
+            h2[i].style.textShadow="0px 0px 0 rgba(0, 0, 0, 0)";
+          };
+          var h3 = document.getElementsByTagName('h3');
+          for( var i = 0; i < h3.length; i++ ) {
+            h3[i].style.textShadow="0px 0px 0 rgba(0, 0, 0, 0)";
+          };
+          var h4 = document.getElementsByTagName('h4');
+          for( var i = 0; i < h4.length; i++ ) {
+            h4[i].style.textShadow="0px 0px 0 rgba(0, 0, 0, 0)";
+          };
+          var h5 = document.getElementsByTagName('h5');
+          for( var i = 0; i < h5.length; i++ ) {
+            h5[i].style.textShadow="0px 0px 0 rgba(0, 0, 0, 0)";
+            h5[i].style.color="rgb(39, 43, 48)";
+          };
+          var h6 = document.getElementsByTagName('h6');
+          for( var i = 0; i < h6.length; i++ ) {
+            h6[i].style.textShadow="0px 0px 0 rgba(0, 0, 0, 0)";
+          };
+          for( var i = 0; i < mutedText.length; i++ ) {
+            mutedText[i].style.color="rgb(39, 43, 48)";
+          };
+          for( var i = 0; i < lightText.length; i++ ) {
+            lightText[i].style.color="rgb(39, 43, 48)";
+          };
+          for( var i = 0; i < targets.length; i++ ) {
+            targets[i].style.backgroundColor="#fff";
+            targets[i].style.border="1px solid rgba(0, 0, 0, 0.125)";
+          };
+          $('#thrustall').addClass('btn-light');
+          $('#thrustback').addClass('btn-light');
+          $('#thrustfront').addClass('btn-light');
+          $('#thrustvert').addClass('btn-light');
+          $('#thrustall').removeClass('btn-dark');
+          $('#thrustback').removeClass('btn-dark');
+          $('#thrustfront').removeClass('btn-dark');
+          $('#thrustvert').removeClass('btn-dark');
+          }
+      else {
+          lightModeOff();
+           }
+     };

@@ -11,3 +11,9 @@
   width: 100%;
   height: 100%;
   position: relative; }
+
+.text-muted-simple {
+  color: #7A8288; }
+
+.text-light-simple {
+  color: #e9ecef; }
