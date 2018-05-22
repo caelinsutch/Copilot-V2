@@ -4,6 +4,27 @@
   var s = 00; // Define the Seconds Counter.
   var t;
 
+  function toggleWarningAlert(){
+      $("#warningAlert").fadeIn(1000);
+  }
+
+  function warningBannerOff(){
+    $("#warningAlert").fadeOut(1000);
+  }
+
+  function toggleEndAlert(){
+      $("#endAlert").fadeIn(1000);
+  }
+
+  function endAlertOff(){
+      $("#endAlert").fadeOut(1000);
+  }
+
+  function startbanner() {
+    $("#warningAlert").fadeOut(10);
+    $("#endAlert").fadeOut(10);
+  }
+
   //Timer Function
   function start() {
     clearInterval(t);
@@ -32,7 +53,15 @@
         sString = s.toString();
       }
       document.getElementById('disp').innerHTML = "0" + h + ":" + mString + ":" + sString;
-
+      if (m == 13) {
+        toggleWarningAlert();
+      }
+      if (m == 13 && s == 5) {
+        warningBannerOff();
+      }
+      if (m == 15) {
+        toggleEndAlert();
+      }
     }, 1000);
     document.getElementById('start-btn').classList.add('shadow');
     document.getElementById('start-btn').classList.remove('shadow-sm');

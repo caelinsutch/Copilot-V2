@@ -1,6 +1,11 @@
 .navbar {
   border: 1px solid rgba(0, 0, 0, 0.6);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 0px;
+  left: 0px;
 
   .container {
     padding: 0;
@@ -25,7 +30,7 @@
 
     &:hover,
     &:focus {
-      @include btn-shadow-inverse($gray-800);
+      background-color: rgba(0, 0, 0, 0.3);
       border-left: 1px solid rgba(0, 0, 0, 0.2);
     }
   }

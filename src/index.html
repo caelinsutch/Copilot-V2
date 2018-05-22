@@ -35,15 +35,15 @@
 	</script>
 </head>
 
-<body onload="toggleHighPower()" style="overflow:hidden;">
+<body onload="toggleHighPower(); startbanner();" style="overflow:hidden;">
 	<nav class="navbar navbar-dark bg-info">
 		<a class="navbar-brand" href="#">Jesuit Robotics</a>
-		<div class="row">
-			<button class="btn btn-info shadow-sm" id="lightMode" onclick="toggleLightMode();" type="button" value="OFF">Light Mode</button>
-	    <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border-radius: 0px; border-color: rgb(0,0,0,0);" class="navbar-toggler" data-target="#navbarNav" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
-		</div>
+		<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border-radius: 0px; border-color: rgb(0,0,0,0);" class="navbar-toggler" data-target="#navbarNav" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+
 
 		<div class="collapse navbar-collapse" id="navbarNav">
+			<button class="btn btn-info shadow-sm" style="margin-left: 92%; margin-top: 30px; z-index: 3; position: absolute;" id="lightMode" onclick="toggleLightMode();" type="button" value="OFF">Light Mode</button>
+			<br>
 			<ul class="navbar-nav">
 				<li class="nav-item">
 					<a class="nav-link text-light-simple" href="#">Pilot<span class="sr-only">(current)</span></a>
@@ -63,7 +63,14 @@
 	</nav>
 
 
-	<div class="container-fluid">
+	<div class="container-fluid" style="margin-top: 50px;">
+		<div class="alert alert-warning" style="margin-top: 40px; right: 25px; float: right; position: absolute; z-index: 1;" id="warningAlert">
+		  <strong>Warning!</strong> You only have 2 minutes left!
+		</div>
+		<div class="alert alert-danger alert-dismissible" style="margin-top: 40px; right: 25px; float: right; position: absolute; z-index: 1;" id="endAlert">
+			<button type="button" class="close" aria-label="Close" onclick="endAlertOff()"><span aria-hidden="true">&times;</span></button>
+		  <strong>Thats It!</strong> You are out of time!
+		</div>
 		<div class="row">
 			<div class="col-lg-2">
 				<div class="card my-4 shadow">
