@@ -3,13 +3,16 @@
   var m = 00; // Define the Minutes Counter.
   var s = 00; // Define the Seconds Counter.
   var t;
+  var x = 0;
 
   function toggleWarningAlert(){
       $("#warningAlert").fadeIn(1000);
-  }
-
-  function warningBannerOff(){
-    $("#warningAlert").fadeOut(1000);
+      setInterval(function(){
+        if (x == 5) {
+          $("#warningAlert").fadeOut(1000);
+        }
+        x = x + 1;
+      }, 1000);
   }
 
   function toggleEndAlert(){
@@ -55,9 +58,6 @@
       document.getElementById('disp').innerHTML = "0" + h + ":" + mString + ":" + sString;
       if (m == 13) {
         toggleWarningAlert();
-      }
-      if (m == 13 && s == 5) {
-        warningBannerOff();
       }
       if (m == 15) {
         toggleEndAlert();
