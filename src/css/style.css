@@ -22,7 +22,7 @@
   border-radius: 0px;
   border-color: rgb(0,0,0,0); }
 
-#lightMode {
+.lightModeStyle {
   margin-left: 92%;
   margin-top: 30px;
   z-index: 3;
