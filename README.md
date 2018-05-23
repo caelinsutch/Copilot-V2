@@ -1,4 +1,3 @@
-<link rel="stylesheet" type="text/css" media="all" href="./css/markdown.css" />
 #Copilot Page V2
 -----------------------------------------
 
