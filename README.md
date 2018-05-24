@@ -1,20 +1,29 @@
 # Copilot Page V2
 
+
 Rework of Copilot Page
 
-## Getting Started
+
+### Getting Started
+
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
+
+
 ### Prerequisites
 
-Git Downloaded
 
-Node.js Downloaded
+1. **Git Installed**
+
+2. **Node.js Installed**
+
+3. **NPM Installed**
+
 
 ### Installing
 
-Steps for Installllll
+Steps for Install
 
 Install node modules
 
@@ -30,7 +39,9 @@ sudo npm install gulp -g
 
 Your Done!
 
+
 ## Run The Web Server
+
 
 Ensure you followed the steps above then proceed. Navigate to the correct file in terminal then
 
@@ -38,7 +49,8 @@ Ensure you followed the steps above then proceed. Navigate to the correct file i
 gulp
 ```
 
-That's it! It should now be running on localhost:3000
+That's it! It should now be running on [localhost:3000](localhost:3000)
+
 
 ## Notes
 

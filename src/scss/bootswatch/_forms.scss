@@ -1,0 +1,9 @@
+legend {
+  color: #fff;
+}
+
+.input-group-addon {
+  @include btn-shadow($secondary);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  color: $white;
+}

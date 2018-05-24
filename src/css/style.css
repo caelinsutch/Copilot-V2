@@ -11,3 +11,27 @@
   width: 100%;
   height: 100%;
   position: relative; }
+
+.text-muted-simple {
+  color: #7A8288; }
+
+.text-light-simple {
+  color: #e9ecef; }
+
+#navtoggle {
+  border-radius: 0px;
+  border-color: rgb(0,0,0,0); }
+
+.lightModeStyle {
+  margin-left: 92%;
+  margin-top: 30px;
+  z-index: 3;
+  position: absolute; }
+
+#warningAlert,
+#endAlert {
+  margin-top: 40px;
+  right: 25px;
+  float: right;
+  position: absolute;
+  z-index: 1; s}

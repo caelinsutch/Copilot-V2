@@ -1,0 +1,68 @@
+.nav-tabs {
+
+  .nav-link,
+  .nav-link:hover {
+    color: #fff;
+  }
+}
+
+.nav-pills {
+
+  .nav-link {
+    @include btn-shadow($gray-800);
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    color: #fff;
+
+    &:hover {
+      @include btn-shadow-inverse($gray-800);
+      border: 1px solid rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  .nav-link.active,
+  .nav-link:hover {
+    background-color: transparent;
+    @include btn-shadow-inverse($gray-800);
+    border: 1px solid rgba(0, 0, 0, 0.6);
+  }
+
+  .nav-link.disabled,
+  .nav-link.disabled:hover {
+    @include btn-shadow($gray-800);
+    color: $nav-link-disabled-color;
+  }
+}
+
+.pagination {
+
+  .page-link {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    @include btn-shadow($gray-800);
+
+    &:hover {
+      @include btn-shadow-inverse($gray-800);
+      text-decoration: none;
+    }
+  }
+
+  .page-item.active .page-link {
+    @include btn-shadow-inverse($gray-800);
+  }
+
+  .page-item.disabled .page-link {
+    @include btn-shadow($gray-800);
+  }
+}
+
+.breadcrumb {
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+  @include btn-shadow($gray-800);
+
+  a,
+  a:hover {
+    color: #fff;
+  }
+}

@@ -1,0 +1,32 @@
+/* REQUIRED */
+@import './src/scss/prettycheckboxes/variables';
+@import './src/scss/prettycheckboxes/core';
+
+/* OPTIONALS */
+@import './node_modules/pretty-checkbox/src/scss/elements/default/fill';
+@import './node_modules/pretty-checkbox/src/scss/elements/default/outline';
+@import './node_modules/pretty-checkbox/src/scss/elements/default/thick';
+
+@import './node_modules/pretty-checkbox/src/scss/elements/font-icon/general';
+
+@import './node_modules/pretty-checkbox/src/scss/elements/svg/general';
+
+@import './node_modules/pretty-checkbox/src/scss/elements/image/general';
+
+@import './node_modules/pretty-checkbox/src/scss/elements/switch/general';
+@import './node_modules/pretty-checkbox/src/scss/elements/switch/fill';
+@import './node_modules/pretty-checkbox/src/scss/elements/switch/slim';
+
+@import './node_modules/pretty-checkbox/src/scss/extras/toggle';
+@import './node_modules/pretty-checkbox/src/scss/extras/plain';
+@import './node_modules/pretty-checkbox/src/scss/extras/round';
+@import './node_modules/pretty-checkbox/src/scss/extras/curve';
+@import './node_modules/pretty-checkbox/src/scss/extras/animation';
+@import './node_modules/pretty-checkbox/src/scss/extras/disabled';
+@import './node_modules/pretty-checkbox/src/scss/extras/locked';
+@import './node_modules/pretty-checkbox/src/scss/extras/colors';
+@import './node_modules/pretty-checkbox/src/scss/extras/print';
+
+@import './node_modules/pretty-checkbox/src/scss/states/hover';
+@import './node_modules/pretty-checkbox/src/scss/states/focus';
+@import './node_modules/pretty-checkbox/src/scss/states/indeterminate';
