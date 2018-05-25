@@ -2,27 +2,27 @@ const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 
-gulp.task('default', ['browserSync', 'sass', 'bootstrap', 'pretty-checkboxes', 'js']);
+gulp.task('default', ['browserSync', 'sass', 'sass:watch', 'js']);
 //compile SASS files into CSS files
-gulp.task('sass', function () {
-  return gulp.src('./sass/**/*.scss')
-    .pipe(sass.sync().on('error', sass.logError))
-    .pipe(gulp.dest('./css'));
+gulp.task('sass', function(){
+  return gulp.src('src/scss/style.scss')
+    .pipe(sass()) // Using gulp-sass
+    .pipe(gulp.dest('src/css'))
 });
 
 gulp.task('sass:watch', function () {
-  gulp.watch('./sass/**/*.scss', ['sass']);
+  gulp.watch('src/scss/styles.scss', ['sass']);
 });
 
 gulp.task('bootstrap', function(){
-  return gulp.src(['./bootstrap.scss'])
+  return gulp.src(['src/scss/bootstrap.scss'])
     .pipe(sass())
     .pipe(gulp.dest("src/css"))
     .pipe(browserSync.stream());
 })
 
 gulp.task('pretty-checkboxes', function(){
-  return gulp.src(['./prettycheckboxes.scss'])
+  return gulp.src(['src/scss/prettycheckboxes.scss'])
     .pipe(sass())
     .pipe(gulp.dest("src/css"))
     .pipe(browserSync.stream());

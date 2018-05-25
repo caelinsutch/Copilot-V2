@@ -3,35 +3,11 @@
   var m = 00; // Define the Minutes Counter.
   var s = 00; // Define the Seconds Counter.
   var t;
-  var x = 0;
-
-  function toggleWarningAlert(){
-      $("#warningAlert").fadeIn(1000);
-      setInterval(function(){
-        if (x == 5) {
-          $("#warningAlert").fadeOut(1000);
-        }
-        x = x + 1;
-      }, 1000);
-  }
-
-  function toggleEndAlert(){
-      $("#endAlert").fadeIn(1000);
-  }
-
-  function endAlertOff(){
-      $("#endAlert").fadeOut(1000);
-  }
-
-  function startbanner() {
-    $("#warningAlert").fadeOut(10);
-    $("#endAlert").fadeOut(10);
-  }
 
   //Timer Function
   function start() {
     clearInterval(t);
-    document.getElementById('stop-btn').innerHTML = "STOP";
+    $("#stop-btn").text("STOP");
     t = setInterval(function() {
       if (s == 59) {
         if (m == 59) {
@@ -55,7 +31,7 @@
         s += 01;
         sString = s.toString();
       }
-      document.getElementById('disp').innerHTML = "0" + h + ":" + mString + ":" + sString;
+      $("#disp").text("0" + h + ":" + mString + ":" + sString)
       if (m == 13) {
         toggleWarningAlert();
       }
@@ -63,30 +39,33 @@
         toggleEndAlert();
       }
     }, 1000);
-    document.getElementById('start-btn').classList.add('shadow');
-    document.getElementById('start-btn').classList.remove('shadow-sm');
+    $("#start-btn").toggleClass("shadow")
+
+    //Toggle Alerts Based On Time
+    if (m >= 10){
+      $("#warningAlert").fadeIn(1000);
+    } else if (m >=13){
+      $("#endAlert").fadeIn(1000)
+    }
   }
 
   function stop() {
     clearInterval(t);
-    if (document.getElementById('stop-btn').innerHTML == "CLEAR") {
+    if ($("#stop-btn").text() == "CLEAR") {
       //clearInterval(t);
       s = 0; // Reset the clock;
       m = 0;
       h = 0;
       sString = "00"
       mString = "00"
-      document.getElementById('disp').innerHTML = "0" + h + ":" + mString + ":" + sString;
-      document.getElementById('stop-btn').classList.remove('shadow');
-      document.getElementById('stop-btn').classList.add('shadow-sm')
+      $("#disp").text("0" + h + ":" + mString + ":" + sString)
+      $("#stop-btn").toggleClass("shadow")
 
     } else {
     clearInterval(t);
-
-    document.getElementById('stop-btn').innerHTML = "CLEAR";
-    document.getElementById('start-btn').classList.remove('shadow');
-    document.getElementById('start-btn').classList.add('shadow-sm');
-    document.getElementById('stop-btn').classList.add('shadow');
+    $("#stop-btn").text("CLEAR")
+    $("#start-btn").toggleClass("shadow");
+    $("#stop-btn").toggleClass("shadow");
     }
   };
 

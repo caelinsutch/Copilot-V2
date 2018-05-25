@@ -1,4 +1,13 @@
 .testing {
+  width: 42.85714%; }
+
+.card-subtitle {
+  color: grey; }
+
+.text-large {
+  font-size: 18pt; }
+
+.testing {
   width: 71.42857%; }
 
 .card-subtitle {
@@ -20,7 +29,7 @@
 
 #navtoggle {
   border-radius: 0px;
-  border-color: rgb(0,0,0,0); }
+  border-color: rgba(0, 0, 0, 0); }
 
 .lightModeStyle {
   margin-left: 92%;
@@ -34,4 +43,26 @@
   right: 25px;
   float: right;
   position: absolute;
-  z-index: 1; s}
+  z-index: 1;
+  display: none; }
+
+.motordial {
+  width: 85px;
+  height: 85px;
+  position: absolute;
+  vertical-align: middle;
+  margin-top: 0px;
+  margin-left: 0px;
+  border: 0px;
+  background: none;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  font-stretch: normal;
+  font-size: 25px;
+  line-height: normal;
+  font-family: Arial;
+  text-align: center;
+  color: white;
+  padding: 0px;
+  -webkit-appearance: none; }
